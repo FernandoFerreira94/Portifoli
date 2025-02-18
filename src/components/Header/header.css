@@ -1,0 +1,94 @@
+.sidebar  {
+    margin: 0;
+    padding: 0;
+    background-color: #090a0c;
+    position: fixed;
+    overflow: auto;
+    height: 100%;
+    width: 200px;
+    display: flex;
+    flex-direction: column;  /* Adicione esta linha */
+}
+
+.sidebar div {
+    background: url('../../assets/5.png');
+    background-color: #090a0c;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 170px;
+    padding-top: 30px;
+}
+
+.sidebar div span {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 20px;
+}
+
+.sidebar div img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: drop-shadow(2px 3px 6px #121212);
+    -webkit-filter: drop-shadow(2px 3px 6px #121212);
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgba(255,255,255,0.7);
+    gap: 0.5rem;
+    flex-direction: row;
+    transition: ease-in-out 0.4s;
+}
+
+.sidebar a:hover {
+    background-color: #121212;
+    color: #fff;
+}
+
+.sidebar .btn-exit {
+    margin: auto 0 10px 0;  /* Adicione esta linha */
+    padding: 16px;  /* Certifique-se de que o preenchimento esteja presente */
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+@media screen and (max-width: 500px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: block;  /* Redefinir para exibição em telas pequenas */
+    }
+
+    div.content {
+        margin-left: 0;
+    }
+
+    .sidebar a {
+        float: left;
+    }
+
+    .sidebar div {
+        display: none;
+    }
+
+    .sidebar .btn-exit {
+        margin-top: 0;  
+        
+    }
+}
+
+
+
