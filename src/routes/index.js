@@ -2,8 +2,6 @@ import { Route, Routes } from "react-router-dom";
 
 import Page404 from "../pages/page404";
 
-import Private from "./Private";
-
 import Home from "../pages/home";
 
 export default function RoutesApp() {

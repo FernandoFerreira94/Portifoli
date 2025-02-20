@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import "./home.css";
 import Header from "../../components/Header";
 import Projeto from "../../components/Projeto";
-import Tecnologia from "../../components/Tecnologia";
 import Sobre from "../../components/Sobre";
 import Title from "../../components/Title";
 import Contato from "../../components/Contato";

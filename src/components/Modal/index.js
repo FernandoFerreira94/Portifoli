@@ -1,11 +1,7 @@
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 import { IoClose } from "react-icons/io5";
 
 import "./modal.css";
 export default function Modal({ q, close }) {
-  const [show, setShow] = useState();
-
   return (
     <>
       <div className="modal">

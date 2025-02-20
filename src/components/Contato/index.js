@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Title from "../Title";
 import "./contato.css";
 import {
@@ -6,7 +5,6 @@ import {
   IoLogoGithub,
   IoLogoWhatsapp,
   IoLogoInstagram,
-  IoClose,
 } from "react-icons/io5";
 import { SiThreads } from "react-icons/si";
 import { SiGmail } from "react-icons/si";
@@ -15,27 +13,8 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 
 export default function Contato() {
-  const [texto, setTexto] = useState("");
-  const [modal, setModal] = useState(false);
-
   function handleModal(text) {
     toast.info(text);
-    setModal(true);
-    setTexto(text);
-    // Seleciona o elemento com a classe .content e adiciona a classe desejada
-    const contentElement = document.querySelector(".content");
-    if (contentElement) {
-      contentElement.classList.add("modified-content");
-    }
-  }
-
-  function close() {
-    setModal(false);
-    // Remove a classe quando o modal é fechado
-    const contentElement = document.querySelector(".content");
-    if (contentElement) {
-      contentElement.classList.remove("modified-content");
-    }
   }
 
   return (
