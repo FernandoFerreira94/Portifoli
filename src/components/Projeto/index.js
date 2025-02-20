@@ -1,170 +1,299 @@
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 import {
   IoLogoHtml5,
   IoLogoCss3,
   IoLogoJavascript,
   IoLogoReact,
-  IoLogoSass,
   IoLogoFirebase,
 } from "react-icons/io5";
+import { Link } from "react-router-dom";
+import { info } from "../Modal/infro";
 
 import "./projeto.css";
 import Title from "../Title";
+import Modal from "../Modal";
+import Tecnologia from "../Tecnologia";
+
+import imgAppChamado from "../../assets/app-chamaods1.png";
+import imgMataMosca from "../../assets/mata-mosca.png";
+import imgPrime from "../../assets/prime-flix.png";
+import imgBondai from "../../assets/bondai.png";
+import imgControleFinanceiro from "../../assets/controle-financeiro.png";
+import imgFinas from "../../assets/financas.png";
+import imgCity from "../../assets/noticia-city.png";
+import imgSpotify from "../../assets/spotfy.png";
+import imgFormulario from "../../assets/formulario-cadastro.png";
 
 export default function Projeto() {
+  const [modalData, setModalData] = useState(null);
+
+  function handleShow(projectKey) {
+    setModalData(info[projectKey]);
+    console.log(info[projectKey]);
+  }
   return (
     <>
-      <Title titulo="Projeto" />
-      <div className="projeto">
-        <h3>Destaques:</h3>
-        <div className="img-projeto">
-          <div className="pro img1">
-            <a
-              href="https://app-chamados-23.netlify.app/"
-              target="_blank"
-              className="link"
-            >
-              <span> App Chamados</span>
-              <div className="icon-pro">
-                <IoLogoHtml5 size={15} color="#9370DB" />
-                <IoLogoCss3 size={15} color="#9370DB" />
-                <IoLogoReact size={15} color="#9370DB" />
-                <IoLogoJavascript size={15} color="#9370DB" />
-                <IoLogoFirebase size={15} color="#9370DB" />
+      {!modalData && (
+        <>
+          <Tecnologia />
+          <Title titulo="Projeto" />
+
+          <h3 className="h3">Destaques:</h3>
+
+          <div className="container-projeto">
+            <div className="projeto">
+              <Link to={info.appChamado.site} target="blank">
+                <div
+                  className="img"
+                  style={{
+                    backgroundImage: `url(${imgAppChamado})`,
+                    backgroundPosition: "0",
+                  }}
+                ></div>
+              </Link>
+              <div className="info">
+                <span className="titulo">{info.appChamado.nome}</span>
+                <div className="icons">
+                  <IoLogoHtml5 size={15} color="#9370DB" />
+                  <IoLogoCss3 size={15} color="#9370DB" />
+                  <IoLogoJavascript size={15} color="#9370DB" />
+                  <IoLogoReact size={15} color="#9370DB" />
+                  <IoLogoFirebase size={15} color="#9370DB" />
+                </div>
+                <button
+                  className="btn-info"
+                  value="appChamado"
+                  onClick={() => handleShow("appChamado")}
+                >
+                  Mais informaçoes
+                </button>
               </div>
-              <p>
-                Aplicativo para cadastro e gestão de chamados de empresas,
-                desenvolvido utilizando React.js para o front-end e Firebase
-                para o back-end.
-              </p>
-            </a>
-          </div>
-          <div className="pro img2">
-            <a
-              href="https://mata-mosca-23.netlify.app/"
-              target="_blank"
-              className="link"
-            >
-              <span>Mata mosca</span>
-              <div className="icon-pro">
-                <IoLogoHtml5 size={15} color="#9370DB" />
-                <IoLogoCss3 size={15} color="#9370DB" />
-                <IoLogoJavascript size={15} color="#9370DB" />
+            </div>
+
+            <div className="projeto">
+              <Link to={info.mataMosca.site} target="blank">
+                <div
+                  className="img"
+                  style={{
+                    backgroundImage: `url(${imgMataMosca})`,
+                  }}
+                ></div>
+              </Link>
+              <div className="info">
+                <span className="titulo">{info.mataMosca.nome}</span>
+                <div className="icons">
+                  <IoLogoHtml5 size={15} color="#9370DB" />
+                  <IoLogoCss3 size={15} color="#9370DB" />
+                  <IoLogoJavascript size={15} color="#9370DB" />
+                </div>
+                <button
+                  className="btn-info"
+                  value="appChamado"
+                  onClick={() => handleShow("mataMosca")}
+                >
+                  Mais informaçoes
+                </button>
               </div>
-              <p>
-                Um jogo interativo onde os usuários tentam clicar em moscas que
-                aparecem na tela é um projeto divertido
-              </p>
-            </a>
+            </div>
+
+            <div className="projeto">
+              <Link to={info.primeFlix.site} target="blank">
+                <div
+                  className="img"
+                  style={{ backgroundImage: `url(${imgPrime})` }}
+                ></div>
+              </Link>
+              <div className="info">
+                <span className="titulo">{info.primeFlix.nome}</span>
+                <div className="icons">
+                  <IoLogoHtml5 size={15} color="#9370DB" />
+                  <IoLogoCss3 size={15} color="#9370DB" />
+                  <IoLogoJavascript size={15} color="#9370DB" />
+                  <IoLogoReact size={15} color="#9370DB" />
+                  <IoLogoFirebase size={15} color="#9370DB" />
+                </div>
+                <button
+                  className="btn-info"
+                  value="appChamado"
+                  onClick={() => handleShow("primeFlix")}
+                >
+                  Mais informaçoes
+                </button>
+              </div>
+            </div>
           </div>
 
-          <div className="pro img3">
-            <a
-              href="https://prime-flix-movie-23.netlify.app/"
-              target="_blank"
-              className="link"
-            >
-              <span>Prime flix</span>
-              <div className="icon-pro">
-                <IoLogoHtml5 size={15} color="#9370DB" />
-                <IoLogoCss3 size={15} color="#9370DB" />
-                <IoLogoReact size={15} color="#9370DB" />
-                <IoLogoJavascript size={15} color="#9370DB" />
-              </div>
-              <p>
-                Um site para a descoberta e visualização de filmes. O site
-                proporciona uma interface intuitiva e amigável para os usuários
-                explorarem e assistirem a trailers de filmes.
-              </p>
-            </a>
-          </div>
-        </div>
+          <h3 className="h3">Todos projetos:</h3>
 
-        <h3>Todos projetos:</h3>
-
-        <div className="pro-rest">
-          <div className="cont rest-1">
-            <a href="">
-              <span>Finas</span>
-              <div>
-                <IoLogoHtml5 size={15} color="#9370DB" />
-                <IoLogoCss3 size={15} color="#9370DB" />
-                <IoLogoJavascript size={15} color="#9370DB" />
+          <div className="container-projeto">
+            <div className="projeto">
+              <Link to="#" target="blank">
+                <div
+                  className="img"
+                  style={{
+                    backgroundImage: `url(${imgBondai})`,
+                  }}
+                ></div>
+              </Link>
+              <div className="info">
+                <span className="titulo">{info.bondai.nome}</span>
+                <div className="icons">
+                  <IoLogoHtml5 size={15} color="#9370DB" />
+                  <IoLogoCss3 size={15} color="#9370DB" />
+                  <IoLogoJavascript size={15} color="#9370DB" />
+                </div>
+                <button
+                  className="btn-info"
+                  onClick={() => handleShow("bondai")}
+                >
+                  Mais informaçoes
+                </button>
               </div>
-            </a>
-          </div>
+            </div>
 
-          <div className="cont rest-2">
-            <a href="">
-              <span>Bondai</span>
-              <div>
-                <IoLogoHtml5 size={15} color="#9370DB" />
-                <IoLogoCss3 size={15} color="#9370DB" />
-                <IoLogoJavascript size={15} color="#9370DB" />
-              </div>
-            </a>
-          </div>
+            {""}
+            {""}
+            {""}
 
-          <div className="cont rest-3">
-            <a href="">
-              <span>Cadastro</span>
-              <div>
-                <IoLogoHtml5 size={15} color="#9370DB" />
-                <IoLogoCss3 size={15} color="#9370DB" />
-                <IoLogoJavascript size={15} color="#9370DB" />
+            <div className="projeto">
+              <Link to="#" target="blank">
+                <div
+                  className="img"
+                  style={{
+                    backgroundImage: `url(${imgSpotify})`,
+                  }}
+                ></div>
+              </Link>
+              <div className="info">
+                <span className="titulo">{info.spotify.nome}</span>
+                <div className="icons">
+                  <IoLogoHtml5 size={15} color="#9370DB" />
+                  <IoLogoCss3 size={15} color="#9370DB" />
+                  <IoLogoJavascript size={15} color="#9370DB" />
+                </div>
+                <button
+                  className="btn-info"
+                  onClick={() => handleShow("spotify")}
+                >
+                  Mais informaçoes
+                </button>
               </div>
-            </a>
-          </div>
+            </div>
 
-          <div className="cont rest-4">
-            <a href="">
-              <span>
-                Controle de <br />
-                despesas
-              </span>
-              <div>
-                <IoLogoHtml5 size={15} color="#9370DB" />
-                <IoLogoCss3 size={15} color="#9370DB" />
-                <IoLogoJavascript size={15} color="#9370DB" />
-                <IoLogoReact size={15} color="#9370DB" />
-              </div>
-            </a>
-          </div>
+            {""}
+            {""}
+            {""}
 
-          <div className="cont rest-5">
-            <a href="">
-              <span>Formulario</span>
-              <div>
-                <IoLogoHtml5 size={15} color="#9370DB" />
-                <IoLogoCss3 size={15} color="#9370DB" />
-                <IoLogoJavascript size={15} color="#9370DB" />
+            <div className="projeto">
+              <Link to="#" target="blank">
+                <div
+                  className="img"
+                  style={{ backgroundImage: `url(${imgControleFinanceiro})` }}
+                ></div>
+              </Link>
+              <div className="info">
+                <span className="titulo">{info.finacas.nome}</span>
+                <div className="icons">
+                  <IoLogoHtml5 size={15} color="#9370DB" />
+                  <IoLogoCss3 size={15} color="#9370DB" />
+                  <IoLogoJavascript size={15} color="#9370DB" />
+                </div>
+                <button
+                  className="btn-info"
+                  onClick={() => handleShow("finacas")}
+                >
+                  Mais informaçoes
+                </button>
               </div>
-            </a>
-          </div>
-
-          <div className="cont rest-6">
-            <a href="">
-              <span>Noticia city</span>
-              <div>
-                <IoLogoHtml5 size={15} color="#9370DB" />
-                <IoLogoCss3 size={15} color="#9370DB" />
-                <IoLogoJavascript size={15} color="#9370DB" />
-              </div>
-            </a>
+            </div>
           </div>
 
-          <div className="cont rest-7">
-            <a href="">
-              <span>Clone spotify</span>
-              <div>
-                <IoLogoHtml5 size={15} color="#9370DB" />
-                <IoLogoCss3 size={15} color="#9370DB" />
-                <IoLogoJavascript size={15} color="#9370DB" />
+          {""}
+          {""}
+          {""}
+
+          <div className="container-projeto">
+            <div className="projeto">
+              <Link to="#" target="blank">
+                <div
+                  className="img"
+                  style={{
+                    backgroundImage: `url(${imgFinas})`,
+                  }}
+                ></div>
+              </Link>
+              <div className="info">
+                <span className="titulo">{info.finas.nome}</span>
+                <div className="icons">
+                  <IoLogoHtml5 size={15} color="#9370DB" />
+                  <IoLogoCss3 size={15} color="#9370DB" />
+                  <IoLogoJavascript size={15} color="#9370DB" />
+                </div>
+                <button
+                  className="btn-info"
+                  onClick={() => handleShow("finas")}
+                >
+                  Mais informaçoes
+                </button>
               </div>
-            </a>
+            </div>
+
+            {""}
+            {""}
+            {""}
+
+            <div className="projeto">
+              <Link to="#" target="blank">
+                <div
+                  className="img"
+                  style={{
+                    backgroundImage: `url(${imgCity})`,
+                  }}
+                ></div>
+              </Link>
+              <div className="info">
+                <span className="titulo">{info.city.nome}</span>
+                <div className="icons">
+                  <IoLogoHtml5 size={15} color="#9370DB" />
+                  <IoLogoCss3 size={15} color="#9370DB" />
+                  <IoLogoJavascript size={15} color="#9370DB" />
+                </div>
+                <button className="btn-info" onClick={() => handleShow("city")}>
+                  Mais informaçoes
+                </button>
+              </div>
+            </div>
+
+            {""}
+            {""}
+            {""}
+
+            <div className="projeto">
+              <Link to="#" target="blank">
+                <div
+                  className="img"
+                  style={{ backgroundImage: `url(${imgFormulario})` }}
+                ></div>
+              </Link>
+              <div className="info">
+                <span className="titulo">{info.formulario.nome}</span>
+                <div className="icons">
+                  <IoLogoHtml5 size={15} color="#9370DB" />
+                  <IoLogoCss3 size={15} color="#9370DB" />
+                  <IoLogoJavascript size={15} color="#9370DB" />
+                </div>
+                <button
+                  className="btn-info"
+                  onClick={() => handleShow("formulario")}
+                >
+                  Mais informaçoes
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </>
+      )}
+      {modalData && <Modal close={() => setModalData("")} q={modalData} />}
     </>
   );
 }

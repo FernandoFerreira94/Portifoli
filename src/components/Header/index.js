@@ -8,23 +8,23 @@ import "./header.css";
 import AvatartImg from "../../assets/perfil.jpg";
 import { Link } from "react-router-dom";
 
-export default function Header() {
+export default function Header({ sobre, projeto, contato }) {
   return (
     <div className="sidebar">
       <div>
         <img src={AvatartImg} alt="" />
       </div>
 
-      <Link>
+      <Link onClick={sobre}>
         {" "}
         <ImProfile size={25} />
         Sobre mim
       </Link>
-      <Link>
+      <Link onClick={projeto}>
         {" "}
         <LiaInternetExplorer size={25} /> Projetos
       </Link>
-      <Link>
+      <Link onClick={contato}>
         {" "}
         <IoIosContact size={25} />
         Contato

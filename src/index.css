@@ -29,7 +29,10 @@
     right: 0;
     bottom: 0;
     filter: brightness(40%);
+    filter: blur(4px);
     z-index: -1;
+    overflow: hidden;
+
   }
   
   a{
@@ -45,11 +48,13 @@
   
   ul{
     list-style: none;
+    margin-left: 20px;
   }
   
   .content {
     margin-left: 200px;
     padding: 1px 16px;
+    overflow: hidden;
   }
   
   .container {
@@ -58,16 +63,17 @@
     flex-direction: column;  
     justify-content: center;
     margin: 30px;
-    padding: 20px;
+    padding: 30px;
     border: 1px solid 	#FFFFE0;
     border-radius: 10px;
     box-shadow: 0 0 10px 	#FFFFE0;
     background-color: rgba(0, 0, 0, 0.786);
+   
   }
 
   .container  span{
     font-size: 18px;
-    color: #FFFFE0;
+    color: #fafaa7;
   }
 
   .container p {

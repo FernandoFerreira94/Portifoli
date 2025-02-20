@@ -1,4 +1,3 @@
-
 .home .cards {
     padding: 50px;
     display: flex;
@@ -7,12 +6,9 @@
     width: 100%;
 }
 
-
-
 .home .cards div {
-    border: 1px solid #9370DB;
-    border-bottom: 3px solid #9370DB;
-    background-color: #090a0c ;
+    position: relative; /* Necessário para o posicionamento absoluto do pseudoelemento */
+    background-color: #090a0c;
     border-radius: 15px 0 15px 0;
     width: 100px;
     height: 110px;
@@ -21,194 +17,102 @@
     justify-content: center;
     align-items: center;
     color: #FFFFE0;
-    transition: all ease-in-out 0.2s;
+    transition: transform 0.2s ease-in-out; /* Transição para o efeito de escala */
     cursor: pointer;
     font-size: 12px;
+}
+
+.home .cards div::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Largura inicial da borda */
+    height: 3px; /* Altura da borda */
+    background-color: #9370DB; /* Cor da borda */
+    transition: width 0.5s ease-out; /* Transição suave para o crescimento da borda */
+}
+
+.home .cards div:hover {
+    transform: scale(1.1);
+}
+
+.home .cards div:hover::after {
+    width: 94%; /* A largura da borda aumenta para 100% ao passar o mouse */
+}
+
+
+.h3{
+    margin-right: auto;
+    font-size: 18px;
+}
+.container-projeto{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container-projeto .projeto{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.container-projeto .projeto .img{
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(50%);
+    background-position: center;
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
     &:hover{
+        filter: brightness(100%);
         transform: scale(1.1);
     }
 }
 
-.projeto{
+.container-projeto .projeto .info{
+    background-color: #090a0cb2;
+}
+
+.titulo{
     width: 100%;
-    padding: 10px;
-}
-
-.projeto h3{
-    margin-left: 20px;
-    font-size: 18px;
-    border-bottom: 2px solid #FFFFE0;
-    display: inline;
-}
-
-.icon-pro{
+    font-weight: bold;
     display: flex;
+    justify-content: center;
+    letter-spacing: 3px;
+    margin: 5px 0;
+}
+
+.icons{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     gap:5px;
-    margin: 10px;
 }
 
-.img-projeto{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 40px 0;
-}
-
-.pro p{
-    font-size: 12px;
-    line-height:15px;
-    letter-spacing: 1px;
-    text-align: center;
-    width: 80%;
-    transition: all ease-in-out 0.2s;
-}
-
-.pro .link {
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: all ease-in-out 0.2s;
-}
-
-.img-projeto .pro {
-    width: 25%;
-    height: 300px;
-    position: relative;
-    overflow: hidden; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all ease-in-out 0.2s;
-    
-}
-
-.img-projeto .pro:hover::before {
-    filter: brightness(100%);
-}
-
-.img-projeto .pro:hover > p,
-.img-projeto .pro:hover > .link {
-    opacity: 0;
-}
-.img-projeto .pro::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: brightness(20%);
-    z-index: -1; /* Mantém o fundo atrás do conteúdo */
-}
-
-
-.img-projeto .img1::before{
-    background-image: url('../../assets/app-chamaods1.png');
-}
-.img-projeto .img2::before{
-    background-image: url('../../assets/mata-mosca.png');
-    background-position: center;
-}
-.img-projeto .img3::before{
-    background-image: url('../../assets/prime-flix.png');
-    background-position: center;
-}
-
- 
-.pro-rest {
-    display: flex;
-    flex-wrap: wrap; 
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
+.conteudo{
     padding: 10px;
+    font-size: 12px;
+    line-height: normal;
+    letter-spacing: 1px;
 }
 
-.pro-rest .cont {
-    width: 25%;
-    height: 300px;
-    margin: 5px 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative; /* Necessário para o posicionamento da camada escura */
-    overflow: hidden; /* Garante que o conteúdo fique dentro do contêiner */
-    cursor: pointer;
-}
-
-.pro-rest .cont::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+.btn-info{
+    padding: 10px 0;
     width: 100%;
-    height: 100%;
-    background-size: 150%;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: brightness(30%); /* Ajuste o valor para escurecer mais ou menos */
-    z-index: -1; /* Mantém o fundo atrás do conteúdo */
-   
-}
-
-.pro-rest .cont div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-}
-
-
-.pro-rest .cont span {
+    background-color: transparent;
+    border: none;
     color: #FFFFE0;
-    font-size: 18px;
-    z-index: 1; 
-    text-align: center;
+    transition: all 0.2s;
+    &:hover{
+        background-color: #121212;
+    }
 }
-
-.pro-rest .cont:hover::before {
-    filter: brightness(100%);
-}
-
-.pro-rest .cont a{
-    transition: all ease-in-out 0.2s;
-}
-
-.pro-rest .cont:hover > a
- {
-    opacity: 0;
-}
-
-
-.pro-rest .rest-1::before {
-    background-image: url('../../assets/financas.png');
-}
-.pro-rest .rest-2::before {
-    background-image: url('../../assets/bondai.png');
-}
-.pro-rest .rest-3::before {
-    background-image: url('../../assets/cadastro.png');
-}
-.pro-rest .rest-4::before {
-    background-image: url('../../assets/controle-financeiro.png');
-}
-.pro-rest .rest-5::before {
-    background-image: url('../../assets/formulario-cadastro.png');
-}
-.pro-rest .rest-6::before {
-    background-image: url('../../assets/noticia-city.png');
-}
-.pro-rest .rest-7::before {
-    background-image: url('../../assets/spotfy.png');
-}
-.pro-rest .rest-8::before {
-    background-image: url('../../assets/controle-financeiro.png');
-}
-
-

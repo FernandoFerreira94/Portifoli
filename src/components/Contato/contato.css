@@ -1,0 +1,57 @@
+.contato {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.contato .icon{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 1s;
+        &:hover{
+            background-color: #fff;
+        }
+}
+
+.contato .icon a {
+    color: #fff;
+}
+
+.git{
+    color: #fff;
+    &:hover{
+    background-color: #090a0c;
+    color: #090a0c;
+    }
+}
+
+.gmail{
+    color: rgb(190, 25, 25);
+}
+
+.what{
+    color: #25D366;
+}
+.insta {
+    color: #fff;
+    &:hover{
+        color: #090a0c;
+    }
+}
+
+.face{
+    color:  #3b5998;
+}
+
+.thread{
+    color: #fff;
+    &:hover{
+        color: #090a0c;
+    }
+}
+  
