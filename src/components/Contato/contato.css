@@ -2,10 +2,10 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
 }
 
-
-.contato .icon{
+.contato .icon {
     padding: 5px;
     display: flex;
     flex-direction: column;
@@ -13,45 +13,73 @@
     cursor: pointer;
     border-radius: 10px;
     transition: all 1s;
-        &:hover{
-            background-color: #fff;
-        }
+}
+
+.contato .icon:hover {
+    background-color: #fff;
 }
 
 .contato .icon a {
     color: #fff;
 }
 
-.git{
+.git {
     color: #fff;
-    &:hover{
-    background-color: #090a0c;
-    color: #090a0c;
-    }
 }
 
-.gmail{
+.git:hover {
+    background-color: #090a0c;
+    color: #090a0c;
+}
+
+.gmail {
     color: rgb(190, 25, 25);
 }
 
-.what{
+.what {
     color: #25D366;
 }
+
 .insta {
     color: #fff;
-    &:hover{
-        color: #090a0c;
-    }
 }
 
-.face{
-    color:  #3b5998;
+.insta:hover {
+    color: #090a0c;
 }
 
-.thread{
+.face {
+    color: #3b5998;
+}
+
+.thread {
     color: #fff;
-    &:hover{
-        color: #090a0c;
+}
+
+.thread:hover {
+    color: #090a0c;
+}
+
+@media screen and (max-width: 500px) {
+    .contato {
+        flex-direction: column; /* Alinha os ícones verticalmente em telas menores */
+        align-items: center; /* Alinha ícones à esquerda */
+        border: 1px solid red;
+
+    }
+
+    .contato .icon {
+        width: 100%; /* Alinha ícones para ocupar a largura total */
+        margin-bottom: 10px; /* Espaçamento entre ícones */
+    }
+
+    .contato .icon a {
+        width: 100%; /* Alinha links para ocupar a largura total */
+        display: flex;
+        justify-content: center; /* Centraliza ícones horizontalmente */
+    }
+
+    .contato .icon a svg {
+        font-size: 1.5em; /* Ajusta o tamanho dos ícones para telas menores */
     }
 }
-  
