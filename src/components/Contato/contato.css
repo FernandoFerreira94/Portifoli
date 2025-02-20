@@ -60,11 +60,10 @@
     color: #090a0c;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
     .contato {
         flex-direction: column; /* Alinha os ícones verticalmente em telas menores */
         align-items: center; /* Alinha ícones à esquerda */
-        border: 1px solid red;
 
     }
 

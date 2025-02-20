@@ -116,7 +116,7 @@
         background-color: #121212;
     }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
     .home .cards {
         display: flex;
         flex-wrap: wrap; /* Permite que os itens se quebrem em várias linhas */
