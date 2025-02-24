@@ -62,7 +62,6 @@ export default function Projeto() {
                 </div>
                 <button
                   className="btn-info"
-                  value="appChamado"
                   onClick={() => handleShow("appChamado")}
                 >
                   Mais informaçoes
@@ -88,7 +87,6 @@ export default function Projeto() {
                 </div>
                 <button
                   className="btn-info"
-                  value="appChamado"
                   onClick={() => handleShow("mataMosca")}
                 >
                   Mais informaçoes
@@ -114,7 +112,6 @@ export default function Projeto() {
                 </div>
                 <button
                   className="btn-info"
-                  value="appChamado"
                   onClick={() => handleShow("primeFlix")}
                 >
                   Mais informaçoes
@@ -127,7 +124,7 @@ export default function Projeto() {
 
           <div className="container-projeto">
             <div className="projeto">
-              <Link to="#" target="blank">
+              <Link to={info.bondai.site} target="blank">
                 <div
                   className="img"
                   style={{
@@ -156,7 +153,7 @@ export default function Projeto() {
             {""}
 
             <div className="projeto">
-              <Link to="#" target="blank">
+              <Link to={info.spotify.site} target="blank">
                 <div
                   className="img"
                   style={{
@@ -185,7 +182,7 @@ export default function Projeto() {
             {""}
 
             <div className="projeto">
-              <Link to="#" target="blank">
+              <Link to={info.finacas.site} target="blank">
                 <div
                   className="img"
                   style={{ backgroundImage: `url(${imgControleFinanceiro})` }}
@@ -214,7 +211,7 @@ export default function Projeto() {
 
           <div className="container-projeto">
             <div className="projeto">
-              <Link to="#" target="blank">
+              <Link to={info.finas.site} target="blank">
                 <div
                   className="img"
                   style={{
@@ -243,7 +240,7 @@ export default function Projeto() {
             {""}
 
             <div className="projeto">
-              <Link to="#" target="blank">
+              <Link to={info.city.site} target="blank">
                 <div
                   className="img"
                   style={{

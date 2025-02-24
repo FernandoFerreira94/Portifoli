@@ -58,7 +58,7 @@ export const info = {
     descricao:
       "Bem-vindo ao projeto do site Bonsai.com.br. Este site está sendo desenvolvido utilizando JavaScript, CSS, Bootstrap e Sass. Nosso objetivo é criar uma experiência de usuário profissional e intuitiva, aproveitando as vantagens dos frameworks modernos para garantir um design responsivo e funcional. Fique à vontade para explorar o código e contribuir com sugestões e melhorias.",
     funcionalidade: ["Site apenas para fins academico"],
-    site: "#",
+    site: "https://bondai23.netlify.app/",
   },
 
   spotify: {
@@ -67,7 +67,7 @@ export const info = {
     descricao:
       "Projeto elaborado academicamente, realizando uma copia do site original da spotfy.com. Focado apenas em estilizar. Efeito de hover, efeito de img fundo combinando com outra img fundo, trazendo um efeito interessante.",
     funcionalidade: ["Projeto fins academicos"],
-    site: "#",
+    site: "https://spotify-23.netlify.app/",
   },
 
   finacas: {
@@ -83,7 +83,7 @@ export const info = {
       "Pesquisa e Filtro: Função para filtrar despesas por data, tipo, descrição e valor.",
       "Exclusão de Despesas: Permite ao usuário excluir despesas cadastradas.",
     ],
-    site: "#",
+    site: "https://controle-financeiro-23.netlify.app/",
   },
 
   finas: {
@@ -96,7 +96,7 @@ export const info = {
       "Cadastro de Usuários:Um formulário de cadastro de e-mail fácil de usar, com um botão de 'Cadastrar-se' que permite novos usuários começarem rapidamente.",
       "Apresentação dos Recursos: Seções informativas que destacam os benefícios do Finas, como a categorização das despesas, gráficos simples que mostram para onde vai o dinheiro, e alertas de contas a pagar e a receber.",
     ],
-    site: "#",
+    site: "https://finas-23.netlify.app/",
   },
 
   city: {
@@ -104,7 +104,7 @@ export const info = {
     frontEnd: "Html5, Css3, JavaScript",
     descricao: "Site fins academicos.",
     funcionalidade: ["Site fins academicos"],
-    site: "#",
+    site: "https://city-23.netlify.app/",
   },
 
   formulario: {
