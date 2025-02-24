@@ -16,25 +16,25 @@ export default function Tecnologia() {
       <Title titulo="Tecnologia" />
       <div className="cards">
         <div>
-          <IoLogoHtml5 size={30} color="#9370DB" /> HTML5
+          <IoLogoHtml5 size={40} color="#9370DB" /> HTML5
         </div>
         <div>
-          <IoLogoCss3 size={30} color="#9370DB" /> CSS{" "}
+          <IoLogoCss3 size={40} color="#9370DB" /> CSS{" "}
         </div>
         <div>
-          <IoLogoJavascript size={30} color="#9370DB" /> JavaScript
+          <IoLogoJavascript size={40} color="#9370DB" /> JavaScript
         </div>
         <div>
-          <IoLogoReact size={30} color="#9370DB" /> React.js
+          <IoLogoReact size={40} color="#9370DB" /> React.js
         </div>
         <div>
-          <SiTypescript size={30} color="#9370DB" /> TypeScript
+          <SiTypescript size={40} color="#9370DB" /> TypeScript
         </div>
         <div>
-          <IoLogoSass size={30} color="#9370DB" /> SASS
+          <IoLogoSass size={40} color="#9370DB" /> SASS
         </div>
         <div>
-          <SiBootstrap size={30} color="#9370DB" /> BootStrap
+          <SiBootstrap size={40} color="#9370DB" /> BootStrap
         </div>
       </div>
     </>

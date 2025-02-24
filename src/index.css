@@ -81,7 +81,7 @@
   }
   
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1050px) {
     .container{
       width: 98%;
       padding: 15px;
