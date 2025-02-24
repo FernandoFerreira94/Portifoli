@@ -30,7 +30,7 @@
     width: 0; /* Largura inicial da borda */
     height: 3px; /* Altura da borda */
     background-color: #9370DB; /* Cor da borda */
-    transition: width 0.5s ease-out; /* Transição suave para o crescimento da borda */
+    transition: all 0.5s ease-out; /* Transição suave para o crescimento da borda */
 }
 
 .home .cards div:hover {
@@ -38,7 +38,8 @@
 }
 
 .home .cards div:hover::after {
-    width: 94%; /* A largura da borda aumenta para 100% ao passar o mouse */
+    width: 90%; /* A largura da borda aumenta para 100% ao passar o mouse */
+    
 }
 
 
@@ -116,18 +117,22 @@
         background-color: #121212;
     }
 }
-@media screen and (max-width: 900px) {
+
+
+@media screen and (max-width: 600px) {
     .home .cards {
         display: flex;
         flex-wrap: wrap; /* Permite que os itens se quebrem em várias linhas */
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
         width: 100%;
+        padding: 15px;
     }
 
     .home .cards div {
-        flex-basis: calc(33.33% - 20px); /* Cada card ocupará um terço da linha, menos margem */
         margin: 10px; /* Espaçamento entre os cards */
+        width: 90px;
+        height: 90px;
     }
 
     .container-projeto {
@@ -145,7 +150,6 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        border-radius: 10px;
     }
 
     .container-projeto .projeto .img {
@@ -163,4 +167,5 @@
         filter: brightness(100%);
         transform: scale(1.1);
     }
+
 }
