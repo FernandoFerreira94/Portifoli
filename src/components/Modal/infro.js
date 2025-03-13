@@ -17,6 +17,25 @@ export const info = {
     site: "https://app-chamados-23.netlify.app/",
   },
 
+  appMedicao: {
+    nome: "App Medição",
+    frontEnd: "Html5, Css3, JavaScript, React.js",
+    backEnd: "FireBase",
+    descricao:
+      "Aplicativo para cadastro e gestão de medições de energia e água, com autenticação segura, interface elegante e funcionalidades completas para facilitar o monitoramento e registro.",
+    funcionalidade: [
+      "Página de Login de Acesso: Sistema de login com autenticação via Firebase Authentication, garantindo segurança no acesso dos usuários.",
+      "Cadastro de Estabelecimentos: Adicione dados das lojas para monitoramento das medições de energia e água.",
+      "Sistema de Autenticação: Verificação de email e senha utilizando Firebase Authentication.",
+      "Gestão de Medições: Registre e atualize medições de energia e água, com possibilidade de incluir fotos para validação das informações.Cadastro e Gestão de Chamados: Os usuários podem criar, editar e excluir chamados de serviços.",
+      "Validação e Atualização de Medições: Sistema de validação com imagens para assegurar a veracidade das informações.Edição de Perfil: Os usuários podem editar suas informações de perfil, incluindo nome e foto.",
+      "Visualização Detalhada: Consulte as medições registradas de forma organizada e intuitiva.Navegação: Header vertical para facilitar a navegação entre as páginas.",
+      "Segurança Avançada: Utilização de rotas privadas (Private Routes) para proteger a interface e redirecionamento automático para a página de login caso o usuário não esteja autenticado.Verificação de Login: Redirecionamento para a página de login se o usuário não estiver autenticado.",
+      "Notificações: Utilização do React Toastify para fornecer feedback visual para o usuário.",
+    ],
+    site: "https://appmedicao.netlify.app/",
+  },
+
   mataMosca: {
     nome: "Mata Mosca",
     frontEnd: "Html5, Css3, JavaScript",
@@ -105,14 +124,5 @@ export const info = {
     descricao: "Site fins academicos.",
     funcionalidade: ["Site fins academicos"],
     site: "https://city-23.netlify.app/",
-  },
-
-  formulario: {
-    nome: "Validação de cadastro",
-    frontEnd: "Html5, Css3, JavaScript",
-    descricao:
-      "Projeto para validação de cadastro, email, cpf e campos prenchidos",
-    funcionalidade: ["Projeto fins academico"],
-    site: "",
   },
 };

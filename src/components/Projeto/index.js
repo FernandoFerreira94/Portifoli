@@ -22,7 +22,7 @@ import imgControleFinanceiro from "../../assets/controle-financeiro.png";
 import imgFinas from "../../assets/financas.png";
 import imgCity from "../../assets/noticia-city.png";
 import imgSpotify from "../../assets/spotfy.png";
-import imgFormulario from "../../assets/formulario-cadastro.png";
+import imgAppMedicao from "../../assets/appmedicaoLogin.png";
 
 export default function Projeto() {
   const [modalData, setModalData] = useState(null);
@@ -42,17 +42,14 @@ export default function Projeto() {
 
           <div className="container-projeto">
             <div className="projeto">
-              <Link to={info.appChamado.site} target="blank">
+              <Link to={info.appMedicao.site} target="blank">
                 <div
                   className="img"
-                  style={{
-                    backgroundImage: `url(${imgAppChamado})`,
-                    backgroundPosition: "0",
-                  }}
+                  style={{ backgroundImage: `url(${imgAppMedicao})` }}
                 ></div>
               </Link>
               <div className="info">
-                <span className="titulo">{info.appChamado.nome}</span>
+                <span className="titulo">{info.appMedicao.nome}</span>
                 <div className="icons">
                   <IoLogoHtml5 size={15} color="#9370DB" />
                   <IoLogoCss3 size={15} color="#9370DB" />
@@ -62,7 +59,7 @@ export default function Projeto() {
                 </div>
                 <button
                   className="btn-info"
-                  onClick={() => handleShow("appChamado")}
+                  onClick={() => handleShow("appMedicao")}
                 >
                   Mais informaçoes
                 </button>
@@ -95,6 +92,38 @@ export default function Projeto() {
             </div>
 
             <div className="projeto">
+              <Link to={info.appChamado.site} target="blank">
+                <div
+                  className="img"
+                  style={{
+                    backgroundImage: `url(${imgAppChamado})`,
+                    backgroundPosition: "0",
+                  }}
+                ></div>
+              </Link>
+              <div className="info">
+                <span className="titulo">{info.appChamado.nome}</span>
+                <div className="icons">
+                  <IoLogoHtml5 size={15} color="#9370DB" />
+                  <IoLogoCss3 size={15} color="#9370DB" />
+                  <IoLogoJavascript size={15} color="#9370DB" />
+                  <IoLogoReact size={15} color="#9370DB" />
+                  <IoLogoFirebase size={15} color="#9370DB" />
+                </div>
+                <button
+                  className="btn-info"
+                  onClick={() => handleShow("appChamado")}
+                >
+                  Mais informaçoes
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <h3 className="h3">Todos projetos:</h3>
+
+          <div className="container-projeto">
+            <div className="projeto">
               <Link to={info.primeFlix.site} target="blank">
                 <div
                   className="img"
@@ -118,11 +147,6 @@ export default function Projeto() {
                 </button>
               </div>
             </div>
-          </div>
-
-          <h3 className="h3">Todos projetos:</h3>
-
-          <div className="container-projeto">
             <div className="projeto">
               <Link to={info.bondai.site} target="blank">
                 <div
@@ -180,7 +204,8 @@ export default function Projeto() {
             {""}
             {""}
             {""}
-
+          </div>
+          <div className="container-projeto">
             <div className="projeto">
               <Link to={info.finacas.site} target="blank">
                 <div
@@ -203,13 +228,7 @@ export default function Projeto() {
                 </button>
               </div>
             </div>
-          </div>
 
-          {""}
-          {""}
-          {""}
-
-          <div className="container-projeto">
             <div className="projeto">
               <Link to={info.finas.site} target="blank">
                 <div
@@ -264,29 +283,6 @@ export default function Projeto() {
             {""}
             {""}
             {""}
-
-            <div className="projeto">
-              <Link to="#" target="blank">
-                <div
-                  className="img"
-                  style={{ backgroundImage: `url(${imgFormulario})` }}
-                ></div>
-              </Link>
-              <div className="info">
-                <span className="titulo">{info.formulario.nome}</span>
-                <div className="icons">
-                  <IoLogoHtml5 size={15} color="#9370DB" />
-                  <IoLogoCss3 size={15} color="#9370DB" />
-                  <IoLogoJavascript size={15} color="#9370DB" />
-                </div>
-                <button
-                  className="btn-info"
-                  onClick={() => handleShow("formulario")}
-                >
-                  Mais informaçoes
-                </button>
-              </div>
-            </div>
           </div>
         </>
       )}
