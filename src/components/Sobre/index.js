@@ -1,6 +1,6 @@
 import Title from "../Title";
 
-import { IoLogoReact, IoLogoJavascript } from "react-icons/io5";
+import { IoLogoReact } from "react-icons/io5";
 import { SiTypescript } from "react-icons/si";
 
 export default function Sobre() {
