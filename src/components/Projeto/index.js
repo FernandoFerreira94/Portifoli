@@ -139,6 +139,7 @@ export default function Projeto() {
                   <IoLogoHtml5 size={15} color="#9370DB" />
                   <IoLogoCss3 size={15} color="#9370DB" />
                   <IoLogoJavascript size={15} color="#9370DB" />
+                  <IoLogoReact size={15} color="#9370DB" />
                 </div>
                 <button
                   className="btn-info"
