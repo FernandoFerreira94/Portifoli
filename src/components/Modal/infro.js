@@ -17,6 +17,26 @@ export const info = {
     site: "https://app-chamados-23.netlify.app/",
   },
 
+  coinsDev: {
+    nome: "Coins Dev",
+    frontEnd: "Html5, Css3, JavaScript, React.js",
+    backEnd: "AXIOS / API 'CoinsCap'",
+    descricao:
+      "CoinsDev é um projeto de interface dinâmica desenvolvido em React.js, que permite aos usuários explorar informações sobre diversas criptomoedas. O projeto utiliza Axios para fazer chamadas à API da CoinCap, apresentando propriedades como preço, valor de mercado, volume e mudança percentual em 24 horas. Os valores são exibidos em formatos amigáveis para o usuário.",
+    funcionalidade: [
+      "Busca Dinâmica de Moedas: Utilize o campo de pesquisa para encontrar detalhes sobre criptomoedas específicas.",
+      "Detalhes da Moeda: Clique em uma moeda para visualizar informações detalhadas em uma página específica.",
+      "Nome da moeda",
+      "Símbolo",
+      "Valor de mercado (formatado)",
+      "Preço (formatado)",
+      "Volume 24h (formatado)",
+      "Mudança percentual em 24 horas",
+      "Paginação: Carregue mais moedas dinamicamente ao clicar no botão 'Carregar mais...'",
+    ],
+    site: "https://coinsdev.netlify.app/",
+  },
+
   appMedicao: {
     nome: "App Medição",
     frontEnd: "Html5, Css3, JavaScript, React.js",

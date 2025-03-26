@@ -23,6 +23,7 @@ import imgFinas from "../../assets/financas.png";
 import imgCity from "../../assets/noticia-city.png";
 import imgSpotify from "../../assets/spotfy.png";
 import imgAppMedicao from "../../assets/appmedicaoLogin.png";
+import imgCoins from "../../assets/coinsDev.png";
 
 export default function Projeto() {
   const [modalData, setModalData] = useState(null);
@@ -124,6 +125,31 @@ export default function Projeto() {
 
           <div className="container-projeto">
             <div className="projeto">
+              <Link to={info.coinsDev.site} target="blank">
+                <div
+                  className="img"
+                  style={{
+                    backgroundImage: `url(${imgCoins})`,
+                  }}
+                ></div>
+              </Link>
+              <div className="info">
+                <span className="titulo">{info.coinsDev.nome}</span>
+                <div className="icons">
+                  <IoLogoHtml5 size={15} color="#9370DB" />
+                  <IoLogoCss3 size={15} color="#9370DB" />
+                  <IoLogoJavascript size={15} color="#9370DB" />
+                </div>
+                <button
+                  className="btn-info"
+                  onClick={() => handleShow("coinsDev")}
+                >
+                  Mais informaçoes
+                </button>
+              </div>
+            </div>
+
+            <div className="projeto">
               <Link to={info.primeFlix.site} target="blank">
                 <div
                   className="img"
@@ -142,30 +168,6 @@ export default function Projeto() {
                 <button
                   className="btn-info"
                   onClick={() => handleShow("primeFlix")}
-                >
-                  Mais informaçoes
-                </button>
-              </div>
-            </div>
-            <div className="projeto">
-              <Link to={info.bondai.site} target="blank">
-                <div
-                  className="img"
-                  style={{
-                    backgroundImage: `url(${imgBondai})`,
-                  }}
-                ></div>
-              </Link>
-              <div className="info">
-                <span className="titulo">{info.bondai.nome}</span>
-                <div className="icons">
-                  <IoLogoHtml5 size={15} color="#9370DB" />
-                  <IoLogoCss3 size={15} color="#9370DB" />
-                  <IoLogoJavascript size={15} color="#9370DB" />
-                </div>
-                <button
-                  className="btn-info"
-                  onClick={() => handleShow("bondai")}
                 >
                   Mais informaçoes
                 </button>
@@ -205,6 +207,7 @@ export default function Projeto() {
             {""}
             {""}
           </div>
+
           <div className="container-projeto">
             <div className="projeto">
               <Link to={info.finacas.site} target="blank">
@@ -283,6 +286,32 @@ export default function Projeto() {
             {""}
             {""}
             {""}
+          </div>
+          <div className="container-projeto">
+            <div className="projeto">
+              <Link to={info.bondai.site} target="blank">
+                <div
+                  className="img"
+                  style={{
+                    backgroundImage: `url(${imgBondai})`,
+                  }}
+                ></div>
+              </Link>
+              <div className="info">
+                <span className="titulo">{info.bondai.nome}</span>
+                <div className="icons">
+                  <IoLogoHtml5 size={15} color="#9370DB" />
+                  <IoLogoCss3 size={15} color="#9370DB" />
+                  <IoLogoJavascript size={15} color="#9370DB" />
+                </div>
+                <button
+                  className="btn-info"
+                  onClick={() => handleShow("bondai")}
+                >
+                  Mais informaçoes
+                </button>
+              </div>
+            </div>
           </div>
         </>
       )}
