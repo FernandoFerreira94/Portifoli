@@ -6,6 +6,8 @@ import {
   IoLogoReact,
   IoLogoFirebase,
 } from "react-icons/io5";
+import { SiTypescript, SiTailwindcss } from "react-icons/si";
+
 import { Link } from "react-router-dom";
 import { info } from "../Modal/infro";
 
@@ -24,6 +26,7 @@ import imgCity from "../../assets/noticia-city.png";
 import imgSpotify from "../../assets/spotfy.png";
 import imgAppMedicao from "../../assets/appmedicaoLogin.png";
 import imgCoins from "../../assets/coinsDev.png";
+import imgRede from "../../assets/redeSocial.png";
 
 export default function Projeto() {
   const [modalData, setModalData] = useState(null);
@@ -125,6 +128,35 @@ export default function Projeto() {
 
           <div className="container-projeto">
             <div className="projeto">
+              <Link to={info.netWork.site} target="blank">
+                <div
+                  className="img"
+                  style={{
+                    backgroundImage: `url(${imgRede})`,
+                  }}
+                ></div>
+              </Link>
+              <div className="info">
+                <span className="titulo">{info.netWork.nome}</span>
+                <div className="icons">
+                  <IoLogoHtml5 size={15} color="#9370DB" />
+                  <IoLogoCss3 size={15} color="#9370DB" />
+                  <IoLogoJavascript size={15} color="#9370DB" />
+                  <IoLogoReact size={15} color="#9370DB" />
+                  <SiTypescript size={15} color="#9370DB" />
+                  <IoLogoFirebase size={15} color="#9370DB" />
+                  <SiTailwindcss size={15} color="#9370DB" />
+                </div>
+                <button
+                  className="btn-info"
+                  onClick={() => handleShow("netWork")}
+                >
+                  Mais informaçoes
+                </button>
+              </div>
+            </div>
+
+            <div className="projeto">
               <Link to={info.coinsDev.site} target="blank">
                 <div
                   className="img"
@@ -140,6 +172,7 @@ export default function Projeto() {
                   <IoLogoCss3 size={15} color="#9370DB" />
                   <IoLogoJavascript size={15} color="#9370DB" />
                   <IoLogoReact size={15} color="#9370DB" />
+                  <SiTypescript size={15} color="#9370DB" />
                 </div>
                 <button
                   className="btn-info"
@@ -178,31 +211,6 @@ export default function Projeto() {
             {""}
             {""}
             {""}
-
-            <div className="projeto">
-              <Link to={info.spotify.site} target="blank">
-                <div
-                  className="img"
-                  style={{
-                    backgroundImage: `url(${imgSpotify})`,
-                  }}
-                ></div>
-              </Link>
-              <div className="info">
-                <span className="titulo">{info.spotify.nome}</span>
-                <div className="icons">
-                  <IoLogoHtml5 size={15} color="#9370DB" />
-                  <IoLogoCss3 size={15} color="#9370DB" />
-                  <IoLogoJavascript size={15} color="#9370DB" />
-                </div>
-                <button
-                  className="btn-info"
-                  onClick={() => handleShow("spotify")}
-                >
-                  Mais informaçoes
-                </button>
-              </div>
-            </div>
 
             {""}
             {""}
@@ -288,7 +296,33 @@ export default function Projeto() {
             {""}
             {""}
           </div>
+
           <div className="container-projeto">
+            <div className="projeto">
+              <Link to={info.spotify.site} target="blank">
+                <div
+                  className="img"
+                  style={{
+                    backgroundImage: `url(${imgSpotify})`,
+                  }}
+                ></div>
+              </Link>
+              <div className="info">
+                <span className="titulo">{info.spotify.nome}</span>
+                <div className="icons">
+                  <IoLogoHtml5 size={15} color="#9370DB" />
+                  <IoLogoCss3 size={15} color="#9370DB" />
+                  <IoLogoJavascript size={15} color="#9370DB" />
+                </div>
+                <button
+                  className="btn-info"
+                  onClick={() => handleShow("spotify")}
+                >
+                  Mais informaçoes
+                </button>
+              </div>
+            </div>
+
             <div className="projeto">
               <Link to={info.bondai.site} target="blank">
                 <div

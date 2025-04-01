@@ -8,7 +8,7 @@ import {
 
 import Title from "../Title";
 
-import { SiTypescript, SiBootstrap } from "react-icons/si";
+import { SiTypescript, SiTailwindcss, SiBootstrap } from "react-icons/si";
 
 export default function Tecnologia() {
   return (
@@ -35,6 +35,9 @@ export default function Tecnologia() {
         </div>
         <div>
           <SiBootstrap size={40} color="#9370DB" /> BootStrap
+        </div>
+        <div>
+          <SiTailwindcss size={40} color="#9370DB" /> TailWind
         </div>
       </div>
     </>

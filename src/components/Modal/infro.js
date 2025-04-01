@@ -1,4 +1,20 @@
 export const info = {
+  netWork: {
+    nome: "Rede Social",
+    frontEnd: "Html5, Css3, JavaScript, TailWind , React.js e TypeScript",
+    backEnd: "FireBase",
+    descricao:
+      "Este é um projeto de rede social onde os usuários podem acessar links para suas redes sociais, como Instagram, Facebook, GitHub e Portfólio.E",
+    funcionalidade: [
+      "Visualização de Redes Sociais: Links para redes sociais de fácil acesso e interação.",
+      "Sistema de Login: Autenticação segura utilizando o Firebase Authentication.",
+      "Gerenciamento de Links: Opção de atualizar ou adicionar novas redes sociais diretamente.",
+      "Notificações Interativas: Feedback visual através de Toastify para ações do usuário.",
+      "Rotas Privadas: Proteção de rotas para acessar áreas restritas.",
+    ],
+    site: "https://network-dusky.vercel.app/",
+  },
+
   appChamado: {
     nome: "App Chamado",
     frontEnd: "Html5, Css3, JavaScript, React.js",
@@ -19,7 +35,7 @@ export const info = {
 
   coinsDev: {
     nome: "Coins Dev",
-    frontEnd: "Html5, Css3, JavaScript, React.js",
+    frontEnd: "Html5, Css3, JavaScript, React.js e TypeScript",
     backEnd: "AXIOS / API 'CoinsCap'",
     descricao:
       "CoinsDev é um projeto de interface dinâmica desenvolvido em React.js, que permite aos usuários explorar informações sobre diversas criptomoedas. O projeto utiliza Axios para fazer chamadas à API da CoinCap, apresentando propriedades como preço, valor de mercado, volume e mudança percentual em 24 horas. Os valores são exibidos em formatos amigáveis para o usuário.",
