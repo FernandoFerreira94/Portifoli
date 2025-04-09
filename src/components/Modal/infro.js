@@ -1,38 +1,4 @@
 export const info = {
-  netWork: {
-    nome: "Rede Social",
-    frontEnd: "Html5, Css3, JavaScript, TailWind , React.js e TypeScript",
-    backEnd: "FireBase",
-    descricao:
-      "Este é um projeto de rede social onde os usuários podem acessar links para suas redes sociais, como Instagram, Facebook, GitHub e Portfólio.E",
-    funcionalidade: [
-      "Visualização de Redes Sociais: Links para redes sociais de fácil acesso e interação.",
-      "Sistema de Login: Autenticação segura utilizando o Firebase Authentication.",
-      "Gerenciamento de Links: Opção de atualizar ou adicionar novas redes sociais diretamente.",
-      "Notificações Interativas: Feedback visual através de Toastify para ações do usuário.",
-      "Rotas Privadas: Proteção de rotas para acessar áreas restritas.",
-    ],
-    site: "https://network-dusky.vercel.app/",
-  },
-
-  appChamado: {
-    nome: "App Chamado",
-    frontEnd: "Html5, Css3, JavaScript, React.js",
-    backEnd: "FireBase",
-    descricao:
-      "Aplicativo para cadastro e gestão de chamados de empresas, desenvolvido utilizando React.js para o front-end e Firebase para o back-end.",
-    funcionalidade: [
-      "Página de Login e Cadastro: Permite que os usuários se registrem e façam login no sistema.",
-      "Sistema de Autenticação: Verificação de email e senha utilizando Firebase Authentication.",
-      "Cadastro e Gestão de Chamados: Os usuários podem criar, editar e excluir chamados de serviços.",
-      "Edição de Perfil: Os usuários podem editar suas informações de perfil, incluindo nome e foto.",
-      "Navegação: Header vertical para facilitar a navegação entre as páginas.",
-      "Verificação de Login: Redirecionamento para a página de login se o usuário não estiver autenticado.",
-      "Notificações: Utilização do React Toastify para fornecer feedback visual para o usuário.",
-    ],
-    site: "https://app-chamados-23.netlify.app/",
-  },
-
   coinsDev: {
     nome: "Coins Dev",
     frontEnd: "Html5, Css3, JavaScript, React.js e TypeScript",
@@ -51,40 +17,6 @@ export const info = {
       "Paginação: Carregue mais moedas dinamicamente ao clicar no botão 'Carregar mais...'",
     ],
     site: "https://coinsdev.netlify.app/",
-  },
-
-  appMedicao: {
-    nome: "App Medição",
-    frontEnd: "Html5, Css3, JavaScript, React.js",
-    backEnd: "FireBase",
-    descricao:
-      "Aplicativo para cadastro e gestão de medições de energia e água, com autenticação segura, interface elegante e funcionalidades completas para facilitar o monitoramento e registro.",
-    funcionalidade: [
-      "Página de Login de Acesso: Sistema de login com autenticação via Firebase Authentication, garantindo segurança no acesso dos usuários.",
-      "Cadastro de Estabelecimentos: Adicione dados das lojas para monitoramento das medições de energia e água.",
-      "Sistema de Autenticação: Verificação de email e senha utilizando Firebase Authentication.",
-      "Gestão de Medições: Registre e atualize medições de energia e água, com possibilidade de incluir fotos para validação das informações.Cadastro e Gestão de Chamados: Os usuários podem criar, editar e excluir chamados de serviços.",
-      "Validação e Atualização de Medições: Sistema de validação com imagens para assegurar a veracidade das informações.Edição de Perfil: Os usuários podem editar suas informações de perfil, incluindo nome e foto.",
-      "Visualização Detalhada: Consulte as medições registradas de forma organizada e intuitiva.Navegação: Header vertical para facilitar a navegação entre as páginas.",
-      "Segurança Avançada: Utilização de rotas privadas (Private Routes) para proteger a interface e redirecionamento automático para a página de login caso o usuário não esteja autenticado.Verificação de Login: Redirecionamento para a página de login se o usuário não estiver autenticado.",
-      "Notificações: Utilização do React Toastify para fornecer feedback visual para o usuário.",
-    ],
-    site: "https://appmedicao.netlify.app/",
-  },
-
-  mataMosca: {
-    nome: "Mata Mosca",
-    frontEnd: "Html5, Css3, JavaScript",
-    descricao:
-      "Este projeto é um jogo interativo de matar moscas desenvolvido com JavaScript. O objetivo do jogo é matar as moscas que aparecem aleatoriamente na tela antes que o tempo acabe. O jogo oferece três níveis de dificuldade: fácil, normal e difícil. Cada nível ajusta a frequência com que as moscas aparecem na tela.",
-    funcionalidade: [
-      "Níveis de Dificuldade: Escolha entre fácil, normal e difícil.",
-      "Cronômetro: O jogo possui um cronômetro que conta o tempo restante.",
-      "Vidas: O jogador tem três vidas. Cada vez que uma mosca não é morta, uma vida é perdida.",
-      "Tamanho e Posição Aleatórios: As moscas aparecem em tamanhos e posições aleatórias na tela.",
-      "Animações e Interatividade: Clique nas moscas para matá-las e elas desaparecerão da tela.",
-    ],
-    site: "https://mata-mosca-23.netlify.app/",
   },
 
   primeFlix: {

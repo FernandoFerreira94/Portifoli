@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Title from "../Title";
 
 import { IoLogoReact } from "react-icons/io5";

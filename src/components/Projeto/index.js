@@ -1,16 +1,7 @@
-import React, { useState } from "react";
-import {
-  IoLogoHtml5,
-  IoLogoCss3,
-  IoLogoJavascript,
-  IoLogoReact,
-  IoLogoFirebase,
-} from "react-icons/io5";
-import { SiTypescript, SiTailwindcss } from "react-icons/si";
+import React, { useState, useEffect } from "react";
+import { getDocs, collection } from "firebase/firestore";
 
-import { Link } from "react-router-dom";
-import { info } from "../Modal/infro";
-
+import { Db } from "../../DataBase";
 import "./projeto.css";
 import Title from "../Title";
 import Modal from "../Modal";
@@ -27,14 +18,74 @@ import imgSpotify from "../../assets/spotfy.png";
 import imgAppMedicao from "../../assets/appmedicaoLogin.png";
 import imgCoins from "../../assets/coinsDev.png";
 import imgRede from "../../assets/redeSocial.png";
+import PostProject from "../PostProject";
 
 export default function Projeto() {
   const [modalData, setModalData] = useState(null);
+  const [main, setMain] = useState([]);
+  const [secundary, setSecundary] = useState([]);
 
-  function handleShow(projectKey) {
-    setModalData(info[projectKey]);
-    console.log(info[projectKey]);
+  useEffect(() => {
+    getPost();
+  }, []);
+
+  async function getPost() {
+    getMain();
+    getSecundary();
   }
+
+  // GET POST PROJETO PRINCIPAIS
+  async function getMain() {
+    const docRef = collection(Db, "project main");
+
+    await getDocs(docRef)
+      .then((snapshot) => {
+        let listaMain = [];
+        snapshot.forEach((doc) => {
+          listaMain.push({
+            name: doc.data()?.name,
+            front: doc.data()["Front-end"],
+            back: doc.data()["Back-end"],
+            description: doc.data()?.description,
+            url: doc.data()?.url,
+            functionality: doc.data()?.functionality,
+            img: doc.data()?.img,
+          });
+        });
+
+        setMain(listaMain);
+        console.log(listaMain);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
+  // GET POST PROJETOS SEGUNDARIOS
+  async function getSecundary() {
+    const docRef = collection(Db, "project secundary");
+
+    await getDocs(docRef)
+      .then((snapshot) => {
+        let listaSecundary = [];
+        snapshot.forEach((doc) => {
+          listaSecundary.push({
+            name: doc.data().name,
+            front: doc.data()["Front-end"],
+            back: doc.data()["Back-end"],
+            description: doc.data().description,
+            url: doc.data().url,
+            functionality: doc.data().functionality,
+          });
+        });
+
+        setSecundary(listaSecundary);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
   return (
     <>
       {!modalData && (
@@ -45,308 +96,20 @@ export default function Projeto() {
           <h3 className="h3">Destaques:</h3>
 
           <div className="container-projeto">
-            <div className="projeto">
-              <Link to={info.appMedicao.site} target="blank">
-                <div
-                  className="img"
-                  style={{ backgroundImage: `url(${imgAppMedicao})` }}
-                ></div>
-              </Link>
-              <div className="info">
-                <span className="titulo">{info.appMedicao.nome}</span>
-                <div className="icons">
-                  <IoLogoHtml5 size={15} color="#9370DB" />
-                  <IoLogoCss3 size={15} color="#9370DB" />
-                  <IoLogoJavascript size={15} color="#9370DB" />
-                  <IoLogoReact size={15} color="#9370DB" />
-                  <IoLogoFirebase size={15} color="#9370DB" />
-                </div>
-                <button
-                  className="btn-info"
-                  onClick={() => handleShow("appMedicao")}
-                >
-                  Mais informaçoes
-                </button>
+            {main.map((doc, index) => (
+              <div className="projeto" key={index}>
+                <PostProject index={index} doc={doc} />
               </div>
-            </div>
-
-            <div className="projeto">
-              <Link to={info.mataMosca.site} target="blank">
-                <div
-                  className="img"
-                  style={{
-                    backgroundImage: `url(${imgMataMosca})`,
-                  }}
-                ></div>
-              </Link>
-              <div className="info">
-                <span className="titulo">{info.mataMosca.nome}</span>
-                <div className="icons">
-                  <IoLogoHtml5 size={15} color="#9370DB" />
-                  <IoLogoCss3 size={15} color="#9370DB" />
-                  <IoLogoJavascript size={15} color="#9370DB" />
-                </div>
-                <button
-                  className="btn-info"
-                  onClick={() => handleShow("mataMosca")}
-                >
-                  Mais informaçoes
-                </button>
-              </div>
-            </div>
-
-            <div className="projeto">
-              <Link to={info.appChamado.site} target="blank">
-                <div
-                  className="img"
-                  style={{
-                    backgroundImage: `url(${imgAppChamado})`,
-                    backgroundPosition: "0",
-                  }}
-                ></div>
-              </Link>
-              <div className="info">
-                <span className="titulo">{info.appChamado.nome}</span>
-                <div className="icons">
-                  <IoLogoHtml5 size={15} color="#9370DB" />
-                  <IoLogoCss3 size={15} color="#9370DB" />
-                  <IoLogoJavascript size={15} color="#9370DB" />
-                  <IoLogoReact size={15} color="#9370DB" />
-                  <IoLogoFirebase size={15} color="#9370DB" />
-                </div>
-                <button
-                  className="btn-info"
-                  onClick={() => handleShow("appChamado")}
-                >
-                  Mais informaçoes
-                </button>
-              </div>
-            </div>
+            ))}
           </div>
 
           <h3 className="h3">Todos projetos:</h3>
-
           <div className="container-projeto">
-            <div className="projeto">
-              <Link to={info.netWork.site} target="blank">
-                <div
-                  className="img"
-                  style={{
-                    backgroundImage: `url(${imgRede})`,
-                  }}
-                ></div>
-              </Link>
-              <div className="info">
-                <span className="titulo">{info.netWork.nome}</span>
-                <div className="icons">
-                  <IoLogoHtml5 size={15} color="#9370DB" />
-                  <IoLogoCss3 size={15} color="#9370DB" />
-                  <IoLogoJavascript size={15} color="#9370DB" />
-                  <IoLogoReact size={15} color="#9370DB" />
-                  <SiTypescript size={15} color="#9370DB" />
-                  <IoLogoFirebase size={15} color="#9370DB" />
-                  <SiTailwindcss size={15} color="#9370DB" />
-                </div>
-                <button
-                  className="btn-info"
-                  onClick={() => handleShow("netWork")}
-                >
-                  Mais informaçoes
-                </button>
+            {secundary.map((doc, index) => (
+              <div key={index}>
+                <PostProject index={index} doc={doc} />
               </div>
-            </div>
-
-            <div className="projeto">
-              <Link to={info.coinsDev.site} target="blank">
-                <div
-                  className="img"
-                  style={{
-                    backgroundImage: `url(${imgCoins})`,
-                  }}
-                ></div>
-              </Link>
-              <div className="info">
-                <span className="titulo">{info.coinsDev.nome}</span>
-                <div className="icons">
-                  <IoLogoHtml5 size={15} color="#9370DB" />
-                  <IoLogoCss3 size={15} color="#9370DB" />
-                  <IoLogoJavascript size={15} color="#9370DB" />
-                  <IoLogoReact size={15} color="#9370DB" />
-                  <SiTypescript size={15} color="#9370DB" />
-                </div>
-                <button
-                  className="btn-info"
-                  onClick={() => handleShow("coinsDev")}
-                >
-                  Mais informaçoes
-                </button>
-              </div>
-            </div>
-
-            <div className="projeto">
-              <Link to={info.primeFlix.site} target="blank">
-                <div
-                  className="img"
-                  style={{ backgroundImage: `url(${imgPrime})` }}
-                ></div>
-              </Link>
-              <div className="info">
-                <span className="titulo">{info.primeFlix.nome}</span>
-                <div className="icons">
-                  <IoLogoHtml5 size={15} color="#9370DB" />
-                  <IoLogoCss3 size={15} color="#9370DB" />
-                  <IoLogoJavascript size={15} color="#9370DB" />
-                  <IoLogoReact size={15} color="#9370DB" />
-                  <IoLogoFirebase size={15} color="#9370DB" />
-                </div>
-                <button
-                  className="btn-info"
-                  onClick={() => handleShow("primeFlix")}
-                >
-                  Mais informaçoes
-                </button>
-              </div>
-            </div>
-
-            {""}
-            {""}
-            {""}
-
-            {""}
-            {""}
-            {""}
-          </div>
-
-          <div className="container-projeto">
-            <div className="projeto">
-              <Link to={info.finacas.site} target="blank">
-                <div
-                  className="img"
-                  style={{ backgroundImage: `url(${imgControleFinanceiro})` }}
-                ></div>
-              </Link>
-              <div className="info">
-                <span className="titulo">{info.finacas.nome}</span>
-                <div className="icons">
-                  <IoLogoHtml5 size={15} color="#9370DB" />
-                  <IoLogoCss3 size={15} color="#9370DB" />
-                  <IoLogoJavascript size={15} color="#9370DB" />
-                </div>
-                <button
-                  className="btn-info"
-                  onClick={() => handleShow("finacas")}
-                >
-                  Mais informaçoes
-                </button>
-              </div>
-            </div>
-
-            <div className="projeto">
-              <Link to={info.finas.site} target="blank">
-                <div
-                  className="img"
-                  style={{
-                    backgroundImage: `url(${imgFinas})`,
-                  }}
-                ></div>
-              </Link>
-              <div className="info">
-                <span className="titulo">{info.finas.nome}</span>
-                <div className="icons">
-                  <IoLogoHtml5 size={15} color="#9370DB" />
-                  <IoLogoCss3 size={15} color="#9370DB" />
-                  <IoLogoJavascript size={15} color="#9370DB" />
-                </div>
-                <button
-                  className="btn-info"
-                  onClick={() => handleShow("finas")}
-                >
-                  Mais informaçoes
-                </button>
-              </div>
-            </div>
-
-            {""}
-            {""}
-            {""}
-
-            <div className="projeto">
-              <Link to={info.city.site} target="blank">
-                <div
-                  className="img"
-                  style={{
-                    backgroundImage: `url(${imgCity})`,
-                  }}
-                ></div>
-              </Link>
-              <div className="info">
-                <span className="titulo">{info.city.nome}</span>
-                <div className="icons">
-                  <IoLogoHtml5 size={15} color="#9370DB" />
-                  <IoLogoCss3 size={15} color="#9370DB" />
-                  <IoLogoJavascript size={15} color="#9370DB" />
-                </div>
-                <button className="btn-info" onClick={() => handleShow("city")}>
-                  Mais informaçoes
-                </button>
-              </div>
-            </div>
-
-            {""}
-            {""}
-            {""}
-          </div>
-
-          <div className="container-projeto">
-            <div className="projeto">
-              <Link to={info.spotify.site} target="blank">
-                <div
-                  className="img"
-                  style={{
-                    backgroundImage: `url(${imgSpotify})`,
-                  }}
-                ></div>
-              </Link>
-              <div className="info">
-                <span className="titulo">{info.spotify.nome}</span>
-                <div className="icons">
-                  <IoLogoHtml5 size={15} color="#9370DB" />
-                  <IoLogoCss3 size={15} color="#9370DB" />
-                  <IoLogoJavascript size={15} color="#9370DB" />
-                </div>
-                <button
-                  className="btn-info"
-                  onClick={() => handleShow("spotify")}
-                >
-                  Mais informaçoes
-                </button>
-              </div>
-            </div>
-
-            <div className="projeto">
-              <Link to={info.bondai.site} target="blank">
-                <div
-                  className="img"
-                  style={{
-                    backgroundImage: `url(${imgBondai})`,
-                  }}
-                ></div>
-              </Link>
-              <div className="info">
-                <span className="titulo">{info.bondai.nome}</span>
-                <div className="icons">
-                  <IoLogoHtml5 size={15} color="#9370DB" />
-                  <IoLogoCss3 size={15} color="#9370DB" />
-                  <IoLogoJavascript size={15} color="#9370DB" />
-                </div>
-                <button
-                  className="btn-info"
-                  onClick={() => handleShow("bondai")}
-                >
-                  Mais informaçoes
-                </button>
-              </div>
-            </div>
+            ))}
           </div>
         </>
       )}
