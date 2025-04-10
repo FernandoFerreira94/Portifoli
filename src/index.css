@@ -30,7 +30,7 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  filter: brightness(40%);
+  filter: brightness(50%);
   z-index: -1;
 }
 
@@ -81,6 +81,12 @@ ul {
 }
 
 @media screen and (max-width: 700px) {
+  body::before {
+    background-color: rgba(11, 13, 24, 0.948);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+  }
   .container {
     width: 98%;
     padding: 15px;
