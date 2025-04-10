@@ -13,31 +13,31 @@ import { SiTypescript, SiTailwindcss, SiBootstrap } from "react-icons/si";
 export default function Tecnologia() {
   return (
     <>
-      <Title titulo="Tecnologia" />
+      <Title titulo="Skill" />
       <div className="cards">
         <div>
-          <IoLogoHtml5 size={40} color="#9370DB" /> HTML5
+          <IoLogoHtml5 /> HTML5
         </div>
         <div>
-          <IoLogoCss3 size={40} color="#9370DB" /> CSS{" "}
+          <IoLogoCss3 /> CSS{" "}
         </div>
         <div>
-          <IoLogoJavascript size={40} color="#9370DB" /> JavaScript
+          <IoLogoJavascript /> JavaScript
         </div>
         <div>
-          <IoLogoReact size={40} color="#9370DB" /> React.js
+          <IoLogoReact /> React.js
         </div>
         <div>
-          <SiTypescript size={40} color="#9370DB" /> TypeScript
+          <SiTypescript /> TypeScript
         </div>
         <div>
-          <IoLogoSass size={40} color="#9370DB" /> SASS
+          <IoLogoSass /> SASS
         </div>
         <div>
-          <SiBootstrap size={40} color="#9370DB" /> BootStrap
+          <SiBootstrap /> BootStrap
         </div>
         <div>
-          <SiTailwindcss size={40} color="#9370DB" /> TailWind
+          <SiTailwindcss /> TailWind
         </div>
       </div>
     </>

@@ -1,43 +1,43 @@
 import { IoClose } from "react-icons/io5";
 
 import "./modal.css";
-export default function Modal({ q, close }) {
+export default function Modal({ doc, close }) {
   return (
     <>
       <div className="modal">
         <div className="close" onClick={close}>
-          <IoClose size={35} color="red" />
+          <IoClose size={50} color="red" />
         </div>
         <span>
-          <strong>Nome:</strong> <i>{q.nome} </i>
+          <strong>Nome:</strong> <i>{doc.name} </i>
         </span>
         <span>
-          <strong>Front-end:</strong> <i>{q.frontEnd} </i>
+          <strong>Front-end:</strong> <i>{doc.front} </i>
         </span>
 
-        {q.backEnd && (
+        {doc.back && (
           <span>
-            <strong>Back-End:</strong> <i>{q.backEnd} </i>
+            <strong>Back-End:</strong> <i>{doc.back} </i>
           </span>
         )}
 
         <span>
-          <strong>Descrição:</strong> <i>{q.descricao} </i>
+          <strong>Descrição:</strong> <i>{doc.description} </i>
         </span>
         <span>
           <strong>Funcionalidade:</strong>
-          {q.funcionalidade.map((iten, index) => (
+          {doc.functionality.map((iten, index) => (
             <ul key={index}>
               <li>
-                * <i>{iten}</i>{" "}
+                <i>{iten}</i>
               </li>
             </ul>
           ))}
         </span>
         <span>
           <strong>Site:</strong>{" "}
-          <a href={q.site} target="blank">
-            {q.nome}
+          <a href={doc.url} target="blank">
+            {doc.name}
           </a>
         </span>
       </div>

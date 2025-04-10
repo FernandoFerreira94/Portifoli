@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import {
   IoLogoHtml5,
@@ -8,32 +8,24 @@ import {
   IoLogoFirebase,
 } from "react-icons/io5";
 import { SiTypescript, SiTailwindcss } from "react-icons/si";
-import ImgApp from "../../assets/appmedicaoLogin.png";
+
+import Img from "../../assets/controle-financeiro.png";
 
 export default function PostProject({ doc }) {
-  useEffect(() => {
-    // Log para verificar o valor de doc.img
-    console.log(ImgApp);
-  }, [ImgApp]);
-
-  function handleShow() {
-    // Função para ações adicionais
-  }
-
+  console.log(Img);
   return (
     <>
       <Link to={doc.url} target="_blank">
         <div
-          className="img"
-          style={{
-            backgroundImage: `url(${doc.img})`,
-          }}
+          className="img-projeto"
+          style={{ backgroundImage: `url(${doc.img})` }}
         ></div>
       </Link>
+
       <div className="info">
         <span className="titulo">{doc.name}</span>
         <div className="icons">
-          {/* Verificação dinâmica baseada no conteúdo de doc.front */}
+          {/* Ícones dinâmicos baseados no conteúdo de doc.front */}
           {doc.front?.includes("Html5") && <IoLogoHtml5 />}
           {doc.front?.includes("Css3") && <IoLogoCss3 />}
           {doc.front?.includes("JavaScript") && <IoLogoJavascript />}
@@ -42,9 +34,6 @@ export default function PostProject({ doc }) {
           {doc.front?.includes("Tailwind CSS") && <SiTailwindcss />}
           {doc.back?.includes("FireBase") && <IoLogoFirebase />}
         </div>
-        <button className="btn-info" onClick={() => handleShow(doc)}>
-          Mais informações
-        </button>
       </div>
     </>
   );

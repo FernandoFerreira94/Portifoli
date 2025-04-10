@@ -1,4 +1,4 @@
-export default function Title({ children, titulo }) {
+export default function Title({ titulo }) {
   return (
     <div className="title">
       <h2>{titulo}</h2>

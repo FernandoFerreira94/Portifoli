@@ -6,6 +6,7 @@ import Projeto from "../../components/Projeto";
 import Sobre from "../../components/Sobre";
 import Title from "../../components/Title";
 import Contato from "../../components/Contato";
+import TypingEffect from "../../components/TypingEffect";
 
 export default function Home() {
   const [showSobre, setShowSobre] = useState(true);
@@ -42,7 +43,9 @@ export default function Home() {
             <Title titulo="Seja Bem-Vindo" />
             <div className="container">
               <h2>Olá eu sou o Fernando Pedro.</h2>
-              <span>Desenvolvedor Frontend</span>
+              <span>
+                Desenvolvedor Frontend <TypingEffect text="React.js" />
+              </span>
             </div>
             <Sobre />
           </>

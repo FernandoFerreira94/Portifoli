@@ -1,79 +1,77 @@
 .contato {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Permite quebra de linha em telas menores */
 }
 
 .contato .icon {
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: all 1s;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 1s;
 }
 
 .contato .icon:hover {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .contato .icon a {
-    color: #fff;
+  color: #fff;
 }
 
 .git {
-    color: #fff;
+  color: #fff;
 }
 
 .git:hover {
-    background-color: #090a0c;
-    color: #090a0c;
+  background-color: #090a0c;
+  color: #090a0c;
 }
 
 .gmail {
-    color: rgb(190, 25, 25);
+  color: rgb(190, 25, 25);
 }
 
 .what {
-    color: #25D366;
+  color: #25d366;
 }
 
 .insta {
-    color: #fff;
+  color: #fff;
 }
 
 .insta:hover {
-    color: #090a0c;
+  color: #090a0c;
 }
 
 .face {
-    color: #3b5998;
+  color: #3b5998;
 }
 
 .thread {
-    color: #fff;
+  color: #fff;
 }
 
 .thread:hover {
-    color: #090a0c;
+  color: #090a0c;
 }
 
 @media screen and (max-width: 1050px) {
-    .contato {
+  .contato {
+  }
 
-    }
+  .contato .icon {
+    margin-bottom: 10px; /* Espaçamento entre ícones */
+    font-size: 50px;
+    margin: 5px 0;
+  }
 
-    .contato .icon {
-        margin-bottom: 10px; /* Espaçamento entre ícones */
-        font-size: 50px;
-        margin: 5px 0;
-    }
-
-    .contato a .icon svg {
-        width: 30px;
-        height: 30px;
-    }
-
+  .contato a .icon svg {
+    width: 30px;
+    height: 30px;
+  }
 }

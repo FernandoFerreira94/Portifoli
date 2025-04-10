@@ -11,19 +11,26 @@
 }
 
 .home .cards div {
+  border: 1px solid #9370db;
   position: relative; /* Necessário para o posicionamento absoluto do pseudoelemento */
   background-color: #090a0c;
   border-radius: 15px 0 15px 0;
-  width: 100px;
-  height: 110px;
+  width: 120px;
+  height: 130px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #ffffe0;
-  transition: transform 0.2s ease-in-out; /* Transição para o efeito de escala */
+  transition: transform 0.8s ease-in-out; /* Transição para o efeito de escala */
   cursor: pointer;
-  font-size: 12px;
+  font-size: 15px;
+  box-shadow: 5px 5px 10px #9370db;
+
+  svg {
+    font-size: 50px;
+    color: #9370db;
+  }
 }
 
 .home .cards div::after {
@@ -38,16 +45,16 @@
 }
 
 .home .cards div:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 .home .cards div:hover::after {
-  width: 90%; /* A largura da borda aumenta para 100% ao passar o mouse */
+  width: 95%; /* A largura da borda aumenta para 100% ao passar o mouse */
 }
 
 .h3 {
-  margin-right: auto;
   font-size: 18px;
+  margin: 40px auto 40px 0;
 }
 .container-projeto {
   width: 100%;
@@ -56,32 +63,38 @@
   align-items: center;
   justify-content: space-around;
 }
-
-.container-projeto .projeto {
-  width: 30%;
+.container-projeto {
   display: flex;
-  flex-direction: column;
-  border-radius: 10px;
-  transition: all ease-in-out 0.5s;
-  &:hover {
-    transform: scale(1.6);
-    z-index: 999;
-  }
+  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+  justify-content: space-around; /* Espaçamento uniforme entre os projetos */
+  gap: 60px;
 }
 
-.container-projeto .projeto .img {
-  height: 250px;
-  width: 100%;
-  background-size: 100%;
-  background-repeat: no-repeat;
-
-  filter: brightness(50%);
-  background-position: center;
-  cursor: pointer;
+.container-projeto .projeto {
+  background-color: #090a0cb2;
+  box-shadow: 0 0 10px #000;
+  display: flex;
+  flex-direction: column;
   transition: all ease-in-out 0.5s;
-  &:hover {
-    filter: brightness(100%);
-  }
+  width: calc(
+    (80% / 3) - 20px
+  ); /* Calcula o tamanho para caber 3 por linha com espaçamento */
+  cursor: pointer;
+}
+
+.container-projeto .projeto:hover {
+  transform: scale(1.15);
+}
+
+.container-projeto .projeto:hover .img-projeto {
+  filter: brightness(100%);
+}
+
+.container-projeto .projeto .img-projeto {
+  filter: brightness(50%);
+  background-size: cover;
+  height: 200px;
+  transition: all ease-in-out 0.5s;
 }
 
 .container-projeto .projeto .info {
@@ -89,8 +102,8 @@
 }
 
 .titulo {
+  font-size: 18px;
   width: 100%;
-  font-weight: bold;
   display: flex;
   justify-content: center;
   letter-spacing: 3px;
@@ -117,6 +130,7 @@
   padding: 10px 0;
   width: 100%;
   background-color: transparent;
+  font-size: 14px;
   border: none;
   color: #ffffe0;
   transition: all 0.2s;

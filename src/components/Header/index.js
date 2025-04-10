@@ -1,36 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoIosContact } from "react-icons/io";
 import { ImProfile } from "react-icons/im";
 import { LiaInternetExplorer } from "react-icons/lia";
 import { IoCloudDownload } from "react-icons/io5";
-import curriculo from "../Header/curriculo.pdf";
+import { FaAngleDoubleRight, FaAngleDoubleLeft } from "react-icons/fa";
+
+import curriculo from "../Header/curriculo2025.pdf";
 
 import "./header.css";
-import AvatartImg from "../../assets/perfil.jpg";
+import AvatartImg from "../../assets/perfil.png";
 import { Link } from "react-router-dom";
 
 export default function Header({ sobre, projeto, contato }) {
-  return (
-    <div className="sidebar">
-      <div>
-        <img src={AvatartImg} alt="Perfil" />
-      </div>
+  const [isExpanded, setIsExpanded] = useState(false);
 
-      <Link onClick={sobre}>
-        <ImProfile size={25} />
-        Sobre mim
-      </Link>
-      <Link onClick={projeto}>
-        <LiaInternetExplorer size={25} /> Projetos
-      </Link>
-      <Link onClick={contato}>
-        <IoIosContact size={25} />
-        Contato
-      </Link>
-      <a href={curriculo} download>
-        <IoCloudDownload size={25} />
-        Download Cv
-      </a>
+  const toggleSidebar = () => {
+    setIsExpanded(!isExpanded);
+  };
+
+  return (
+    <div className={`sidebar ${isExpanded ? "expanded" : "collapsed"}`}>
+      <div className="header">
+        <img src={AvatartImg} alt="Perfil" className="profile-pic" />
+      </div>
+      <button className="toggle-btn" onClick={toggleSidebar}>
+        {isExpanded ? (
+          <FaAngleDoubleLeft size={25} />
+        ) : (
+          <FaAngleDoubleRight size={25} />
+        )}
+      </button>
+      <nav>
+        <Link onClick={sobre}>
+          <ImProfile size={30} />
+          {isExpanded && <span>Sobre mim</span>}
+        </Link>
+        <Link onClick={projeto}>
+          <LiaInternetExplorer size={30} />
+          {isExpanded && <span>Projetos</span>}
+        </Link>
+        <Link onClick={contato}>
+          <IoIosContact size={30} />
+          {isExpanded && <span>Contato</span>}
+        </Link>
+        <a href={curriculo} download>
+          <IoCloudDownload size={30} />
+          {isExpanded && <span>Download CV</span>}
+        </a>
+      </nav>
     </div>
   );
 }

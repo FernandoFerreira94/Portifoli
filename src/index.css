@@ -1,96 +1,95 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-  }
-  
-  html, body, #root{
-    height: 100%;
-  }
-  
-  body{
-    background-color: #efefef;
-    font-size: 14px;
-    color: #fff;
-  }
-  
-  
-  body::before {
-    content: "";
-    background-image: url('./assets/back05.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    filter: brightness(40%);
-    filter: blur(4px);
-    z-index: -1;
-    overflow: hidden;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  scrollbar-width: none;
+}
 
-  }
-  
-  a{
-    text-decoration: none;
-   
-  }
+html,
+body,
+#root {
+  height: 100%;
+}
 
-  
+body {
+  background-color: #efefef;
+  font-size: 14px;
+  color: #fff;
+}
 
-  button{
-    cursor: pointer;
-  }
-  
-  ul{
-    list-style: none;
-    margin-left: 20px;
-  }
-  
-  .content {
-    margin-left: 200px;
-    padding: 1px 16px;
-    overflow: hidden;
-  }
-  
+body::before {
+  content: "";
+  background-image: url("./assets/back05.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: brightness(40%);
+  z-index: -1;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  margin-left: 20px;
+}
+
+.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  overflow: hidden;
+}
+
+.container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+  padding: 30px;
+  border: 1px solid #ffffe0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ffffe0;
+  background-color: rgba(0, 0, 0, 0.786);
+}
+
+.container span {
+  font-size: 18px;
+  color: #fafaa7;
+}
+.container .typing {
+  color: rgb(0, 166, 255);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.container p {
+  font-size: 1.2em;
+}
+
+@media screen and (max-width: 1050px) {
   .container {
-    width:70% ;
-    display: flex;
-    flex-direction: column;  
-    justify-content: center;
-    margin: 20px;
-    padding: 30px;
-    border: 1px solid 	#FFFFE0;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 	#FFFFE0;
-    background-color: rgba(0, 0, 0, 0.786);
-   
-  }
-
-  .container  span{
-    font-size: 18px;
-    color: #fafaa7;
+    width: 98%;
+    padding: 15px;
+    margin: 10px;
+    font-size: 14px;
   }
 
   .container p {
-    font-size: 1.2em;
+    font-size: 14px;
+    line-height: 27px;
   }
-  
-
-  @media screen and (max-width: 1050px) {
-    .container{
-      width: 98%;
-      padding: 15px;
-      margin: 10px ;
-      font-size: 14px;
-    } 
-
-    .container p {
-      font-size: 14px;
-      line-height: 27px;
-    }
-  }
+}
