@@ -5,10 +5,6 @@
   align-items: center;
   width: 100%;
 }
-.icons svg {
-  font-size: 17px;
-  color: #9370db;
-}
 
 .home .cards div {
   border: 1px solid #9370db;
@@ -140,21 +136,6 @@
 }
 
 @media screen and (max-width: 1050px) {
-  .home .cards {
-    display: flex;
-    flex-wrap: wrap; /* Permite que os itens se quebrem em várias linhas */
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 15px;
-  }
-
-  .home .cards div {
-    margin: 10px; /* Espaçamento entre os cards */
-    width: 90px;
-    height: 90px;
-  }
-
   .container-projeto {
     flex-wrap: wrap;
     width: 100%;
@@ -177,14 +158,70 @@
     height: 250px;
     background-size: cover;
     background-repeat: no-repeat;
-    filter: brightness(50%);
+    filter: brightness(100%);
     background-position: center;
     cursor: pointer;
     transition: all ease-in-out 0.5s;
   }
 
   .container-projeto .projeto .img:hover {
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container-projeto .projeto .img-projeto {
     filter: brightness(100%);
-    transform: scale(1.1);
+    height: 300px;
+  }
+  .container-projeto {
+    padding: 10px;
+  }
+
+  .container-projeto .projeto .img:hover {
+    transform: scale(1);
+  }
+
+  .home .cards {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens se quebrem em várias linhas */
+    width: 100%;
+    gap: 10px;
+    padding: 0;
+  }
+
+  .home .cards {
+    padding: 20px;
+    justify-content: space-between;
+  }
+
+  .home .cards div {
+    position: relative; /* Necessário para o posicionamento absoluto do pseudoelemento */
+    background-color: #090a0c;
+    border-radius: 15px 0 15px 0;
+    width: 45%;
+    height: 60px;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      display: none;
+    }
+    svg {
+      font-size: 35px;
+    }
+  }
+
+  .home .cards div:hover {
+    transform: scale(1);
+  }
+
+  .home .cards div:hover::after {
+    width: 0; /* A largura da borda aumenta para 100% ao passar o mouse */
+  }
+
+  .h3 {
+    font-size: 22px;
   }
 }

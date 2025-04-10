@@ -7,7 +7,6 @@
   transition: width 0.3s ease;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
 }
 
 .sidebar.expanded {
@@ -69,6 +68,9 @@ nav a {
   text-decoration: none;
   gap: 10px;
   transition: all 0.3s ease;
+  svg {
+    font-size: 30px;
+  }
 }
 
 nav a:hover {
@@ -84,4 +86,46 @@ nav a span {
 
 .sidebar.expanded nav a span {
   opacity: 1; /* Mostrar nomes no estado expandido */
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    height: 70px;
+    width: 100%; /* Largura no estado colapsado */
+    justify-content: start;
+    display: flex;
+    flex-direction: row;
+    z-index: 99;
+  }
+
+  .profile-pic {
+    width: 50px; /* Tamanho pequeno no estado colapsado */
+    height: 50px;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: 10px;
+  }
+
+  nav a svg {
+    font-size: 35px;
+  }
+
+  .toggle-btn {
+    display: none;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-left: 30px;
+  }
 }

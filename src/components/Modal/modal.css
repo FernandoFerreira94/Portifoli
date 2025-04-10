@@ -52,13 +52,13 @@
 
 @media screen and (max-width: 1050px) {
   .modal {
-    width: 100%;
-    padding-top: 50px;
-    padding: 50px 10px 20px 10px;
+    width: 90%;
+    padding: 50px 30px 20px 30px;
+    margin: 30px;
   }
 
   .modal span {
-    font-size: 14px;
-    line-height: 25px;
+    font-size: 18px;
+    line-height: 33px;
   }
 }

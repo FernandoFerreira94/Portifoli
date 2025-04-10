@@ -32,19 +32,19 @@ export default function Header({ sobre, projeto, contato }) {
       </button>
       <nav>
         <Link onClick={sobre}>
-          <ImProfile size={30} />
+          <ImProfile />
           {isExpanded && <span>Sobre mim</span>}
         </Link>
         <Link onClick={projeto}>
-          <LiaInternetExplorer size={30} />
+          <LiaInternetExplorer />
           {isExpanded && <span>Projetos</span>}
         </Link>
         <Link onClick={contato}>
-          <IoIosContact size={30} />
+          <IoIosContact />
           {isExpanded && <span>Contato</span>}
         </Link>
         <a href={curriculo} download>
-          <IoCloudDownload size={30} />
+          <IoCloudDownload />
           {isExpanded && <span>Download CV</span>}
         </a>
       </nav>

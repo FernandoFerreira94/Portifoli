@@ -16,28 +16,29 @@ export default function Tecnologia() {
       <Title titulo="Skill" />
       <div className="cards">
         <div>
-          <IoLogoHtml5 /> HTML5
+          <IoLogoHtml5 /> <span> HTML5 </span>
+        </div>
+
+        <div>
+          <IoLogoCss3 /> <span>CSS </span>
         </div>
         <div>
-          <IoLogoCss3 /> CSS{" "}
+          <IoLogoJavascript /> <span> JavaScript</span>
         </div>
         <div>
-          <IoLogoJavascript /> JavaScript
+          <IoLogoReact /> <span> React.js</span>
         </div>
         <div>
-          <IoLogoReact /> React.js
+          <SiTypescript /> <span> TypeScript</span>
         </div>
         <div>
-          <SiTypescript /> TypeScript
+          <IoLogoSass /> <span> SASS</span>
         </div>
         <div>
-          <IoLogoSass /> SASS
+          <SiBootstrap /> <span> BootStrap</span>
         </div>
         <div>
-          <SiBootstrap /> BootStrap
-        </div>
-        <div>
-          <SiTailwindcss /> TailWind
+          <SiTailwindcss /> <span> TailWind</span>
         </div>
       </div>
     </>

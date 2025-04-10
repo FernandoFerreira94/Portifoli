@@ -48,9 +48,9 @@ ul {
 }
 
 .content {
-  margin-left: 200px;
   padding: 1px 16px;
   overflow: hidden;
+  width: 100%;
 }
 
 .container {
@@ -80,16 +80,26 @@ ul {
   font-size: 1.2em;
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 700px) {
   .container {
     width: 98%;
     padding: 15px;
     margin: 10px;
-    font-size: 14px;
+    font-size: 16px;
+  }
+
+  .container span {
+    font-size: 20px;
+    color: #fafaa7;
+  }
+  .container .typing {
+    color: rgb(0, 166, 255);
+    font-size: 22px;
+    font-weight: 600;
   }
 
   .container p {
-    font-size: 14px;
-    line-height: 27px;
+    font-size: 17px;
+    line-height: 33px;
   }
 }
