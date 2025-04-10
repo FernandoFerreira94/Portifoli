@@ -82,9 +82,12 @@ ul {
 
 @media screen and (max-width: 700px) {
   body::before {
-    background-color: rgba(11, 13, 24, 0.948);
+    content: "";
+    background-image: url("./assets/background.jpg");
     background-repeat: no-repeat;
+    background-color: rgba(10, 10, 25, 0.954);
     background-size: 100%;
+    background-attachment: fixed;
     background-position: center;
   }
   .container {
