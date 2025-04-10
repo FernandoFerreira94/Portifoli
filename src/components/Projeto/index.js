@@ -100,7 +100,7 @@ export default function Projeto() {
   return (
     <>
       {!modalData ? (
-        <>
+        <div className="cap">
           <Tecnologia />
           <Title titulo="Projeto" />
 
@@ -135,7 +135,7 @@ export default function Projeto() {
                 )
             )}
           </div>
-        </>
+        </div>
       ) : (
         <Modal doc={modalData} close={closeModal} />
       )}
