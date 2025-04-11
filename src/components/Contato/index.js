@@ -51,10 +51,7 @@ export default function Contato() {
             </div>
           </Link>
 
-          <Link
-            className="what"
-            onClick={() => handleModal("+55 (12)99704-1551")}
-          >
+          <Link className="what" target="_blank" to="https://wa.me/12997041551">
             <div className="icon">
               <IoLogoWhatsapp size={70} />
             </div>

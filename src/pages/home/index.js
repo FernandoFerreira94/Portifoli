@@ -44,7 +44,7 @@ export default function Home() {
         {showSobre && (
           <>
             <Title titulo="Seja Bem-Vindo" />
-            <div className="container">
+            <div className="container sobre">
               <h2>Olá eu sou o Fernando Pedro.</h2>
               <span>
                 Desenvolvedor Frontend <TypingEffect text="React.js" />

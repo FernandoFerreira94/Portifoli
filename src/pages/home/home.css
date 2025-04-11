@@ -50,6 +50,10 @@
 }
 
 @media screen and (max-width: 700px) {
+  .sobre {
+    height: 200px;
+    justify-content: start;
+  }
   .home .title {
     margin-top: 50px;
   }
