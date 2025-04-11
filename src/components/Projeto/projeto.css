@@ -202,26 +202,30 @@
   .container-projeto .projeto .img:hover {
     transform: scale(1);
   }
+  .home {
+    padding: 50px 0 0 0;
+    margin: 0;
+    width: 1005;
+  }
 
   .home .cards {
+    margin: 0;
     display: flex;
     flex-wrap: wrap; /* Permite que os itens se quebrem em várias linhas */
     width: 100%;
     gap: 10px;
     padding: 0;
-  }
-
-  .home .cards {
-    padding: 20px;
     justify-content: space-between;
   }
 
   .home .cards div {
+    border: 1px solid #ffffe0;
+    box-shadow: 0 0 10px #ffffe0;
     position: relative; /* Necessário para o posicionamento absoluto do pseudoelemento */
     background-color: #090a0c;
     border-radius: 15px 0 15px 0;
     width: 45%;
-    height: 60px;
+    height: 50px;
     margin: 5px;
     justify-content: center;
     align-items: center;
@@ -231,6 +235,7 @@
     }
     svg {
       font-size: 35px;
+      color: #ffffe0;
     }
   }
 

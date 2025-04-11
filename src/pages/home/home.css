@@ -53,6 +53,9 @@
   .home .title {
     margin-top: 50px;
   }
+  .typing {
+    display: block;
+  }
 
   .home .title h2 {
     font-size: 1.75em;
