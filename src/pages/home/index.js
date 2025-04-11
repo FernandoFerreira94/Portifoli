@@ -32,11 +32,14 @@ export default function Home() {
 
   return (
     <>
+      <div className="fixed-background"></div>
+
       <Header
         sobre={handleSobre}
         projeto={handleShowProjeto}
         contato={handleContato}
       />
+
       <div className="content home">
         {showSobre && (
           <>
