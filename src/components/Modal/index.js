@@ -2,6 +2,7 @@ import { IoClose } from "react-icons/io5";
 
 import "./modal.css";
 export default function Modal({ doc, close }) {
+  console.log(doc);
   return (
     <>
       <div className="modal">
@@ -12,12 +13,12 @@ export default function Modal({ doc, close }) {
           <strong>Nome:</strong> <i>{doc.name} </i>
         </span>
         <span>
-          <strong>Front-end:</strong> <i>{doc.front} </i>
+          <strong>Frontend:</strong> <i>{doc.frontend} </i>
         </span>
 
-        {doc.back && (
+        {doc.backend && (
           <span>
-            <strong>Back-End:</strong> <i>{doc.back} </i>
+            <strong>Backend:</strong> <i>{doc.backend} </i>
           </span>
         )}
 
