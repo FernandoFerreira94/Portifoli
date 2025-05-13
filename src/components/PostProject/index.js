@@ -9,7 +9,7 @@ import {
 } from "react-icons/io5";
 import { SiTypescript, SiTailwindcss } from "react-icons/si";
 
-import Img from "../../assets/controle-financeiro.png";
+import Img from "../../assets/devShop.png";
 
 export default function PostProject({ doc }) {
   console.log(Img);

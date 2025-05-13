@@ -20,6 +20,7 @@ import ImgSpotify from "../../assets/spotfy.png";
 import ImgControleFincas from "../../assets/controle-financeiro.png";
 import ImgFinas from "../../assets/financas.png";
 import ImgNoticia from "../../assets/noticia-city.png";
+import ImgDevShop from "../../assets/devShop.png";
 
 export default function Projeto() {
   const [modalData, setModalData] = useState(null); // Dados do projeto no modal
