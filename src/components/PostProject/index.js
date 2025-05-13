@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import {
   IoLogoHtml5,
@@ -9,10 +8,7 @@ import {
 } from "react-icons/io5";
 import { SiTypescript, SiTailwindcss } from "react-icons/si";
 
-import Img from "../../assets/devShop.png";
-
 export default function PostProject({ doc }) {
-  console.log(Img);
   return (
     <>
       <Link to={doc.url} target="_blank">
@@ -24,7 +20,7 @@ export default function PostProject({ doc }) {
 
       <div className="info">
         <span className="titulo">{doc.name}</span>
-        <div className="icons">
+        <div>
           {/* Ícones dinâmicos baseados no conteúdo de doc.front */}
           {doc.frontend?.includes("Html5") && <IoLogoHtml5 />}
           {doc.frontend?.includes("Css3") && <IoLogoCss3 />}

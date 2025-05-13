@@ -1,9 +1,10 @@
 .home .cards {
-  padding: 50px;
+  padding: 30px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   width: 100%;
+  gap: 120px;
 }
 
 .home .cards div {
@@ -11,8 +12,8 @@
   position: relative; /* Necessário para o posicionamento absoluto do pseudoelemento */
   background-color: #090a0c;
   border-radius: 15px 0 15px 0;
-  width: 120px;
-  height: 130px;
+  width: 150px;
+  height: 160px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,7 +25,7 @@
   box-shadow: 3px 3px 5px #9370db;
 
   svg {
-    font-size: 50px;
+    font-size: 60px;
     color: #9370db;
   }
 }
@@ -60,14 +61,13 @@
   margin-left: 200px;
   padding: 0 30px;
 }
+
 .container-projeto {
   width: 100%;
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-around;
-}
-.container-projeto {
   display: flex;
   flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
   justify-content: space-around; /* Espaçamento uniforme entre os projetos */
@@ -81,9 +81,14 @@
   flex-direction: column;
   transition: all ease-in-out 0.5s;
   width: calc(
-    (80% / 3) - 20px
+    (75% / 3) - 20px
   ); /* Calcula o tamanho para caber 3 por linha com espaçamento */
   cursor: pointer;
+}
+.container-projeto .projeto svg {
+  color: #9370db;
+  margin-right: 7px;
+  font-size: 17px;
 }
 
 .container-projeto .projeto:hover {
@@ -98,21 +103,26 @@
   filter: brightness(50%);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 200px;
+  height: 300px;
   transition: all ease-in-out 0.5s;
 }
 
 .container-projeto .projeto .info {
   background-color: #090a0cb2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .titulo {
   font-size: 18px;
   width: 100%;
   display: flex;
-  justify-content: center;
   letter-spacing: 3px;
   margin: 5px 0;
+  justify-content: center;
 }
 
 .icons {

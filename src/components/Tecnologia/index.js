@@ -4,6 +4,8 @@ import {
   IoLogoJavascript,
   IoLogoReact,
   IoLogoSass,
+  IoLogoNodejs,
+  IoLogoFirebase,
 } from "react-icons/io5";
 
 import Title from "../Title";
@@ -13,15 +15,12 @@ import { SiTypescript, SiTailwindcss, SiBootstrap } from "react-icons/si";
 export default function Tecnologia() {
   return (
     <>
-      <Title titulo="Skill" />
+      <Title titulo="Front-end" />
       <div className="cards">
         <div>
           <IoLogoHtml5 /> <span> HTML5 </span>
         </div>
 
-        <div>
-          <IoLogoCss3 /> <span>CSS </span>
-        </div>
         <div>
           <IoLogoJavascript /> <span> JavaScript</span>
         </div>
@@ -31,6 +30,12 @@ export default function Tecnologia() {
         <div>
           <SiTypescript /> <span> TypeScript</span>
         </div>
+      </div>
+      <Title titulo="UI Design" />
+      <div className="cards">
+        <div>
+          <IoLogoCss3 /> <span>CSS </span>
+        </div>
         <div>
           <IoLogoSass /> <span> SASS</span>
         </div>
@@ -39,6 +44,15 @@ export default function Tecnologia() {
         </div>
         <div>
           <SiTailwindcss /> <span> TailWind</span>
+        </div>
+      </div>
+      <Title titulo="Back-end" />
+      <div className="cards">
+        <div>
+          <IoLogoNodejs /> <span> Node.js</span>
+        </div>
+        <div>
+          <IoLogoFirebase /> <span> FireBase</span>
         </div>
       </div>
     </>
